@@ -16,8 +16,7 @@ int main() {
 
     cout << "=========================================================" << endl;
     cout << "   MOTOR DE RECOMENDACIONES DE PELICULAS - GRUPO 5" << endl;
-    cout << "=========================================================" << endl;
-    cout << "Sistema iniciado. Ingrese 'ayuda' para ver opciones o 'salir' para apagar." << endl;
+    cout << "=========================================================" << endl;   
     
     return 0;
 }
