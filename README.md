@@ -1,0 +1,3 @@
+Regla 1: Nadie programa en la rama main. Cada uno debe abrir VS Code, ir a la esquina inferior izquierda (donde dice main), hacer clic y seleccionar "Create new branch" (Crear nueva rama). Deben ponerle un nombre que identifique su tarea, como david-grafos o piero-hash.
+Regla 2: Trabajeremos usando las herramientas visuales de Visual Studio Code o GitHub Desktop para hacer sus "Commits". No intentemos escribir comandos extraños en la consola negra hasta que dominen el flujo visual.
+Todo lo relacionado a Github y VS Code ya seria cuestion de aprender a usarlo utiliazando y preguntadole a la IA. Esta es la forma mas rapida y facil de poder avanzar el proyecto
