@@ -12,7 +12,7 @@ struct Pelicula {
 class TablaHash {
 private:
     // Arreglo de punteros para manejar la memoria dinamica
-    Pelicula* tabla[100]; 
+    Pelicula* tabla[1009]; 
 public:
     TablaHash();
     void insertar(int id, std::string titulo, std::string genero, int anio);

@@ -7,20 +7,22 @@ struct NodoAVL {
     std::string titulo;
     std::string genero;
     int anio;
-    NodoAVL* izquierdo;
-    NodoAVL* derecho;
     int altura;
+    NodoAVL* izq;
+    NodoAVL* der;
 };
 
 class ArbolAVL {
 private:
     NodoAVL* raiz;
-    // Las funciones de rotacion (Izquierda, Derecha, Dobles) se programaran despues
+    int obtenerAltura(NodoAVL* nodo);
+    int obtenerBalance(NodoAVL* nodo);
+    NodoAVL* rotarDerecha(NodoAVL* y);
+    NodoAVL* rotarIzquierda(NodoAVL* x);
+    NodoAVL* insertarNodo(NodoAVL* nodo, int id, std::string titulo, std::string genero, int anio);
+    
 public:
     ArbolAVL();
     void insertar(int id, std::string titulo, std::string genero, int anio);
-    std::string buscarPorRango(int desde, int hasta);
-    std::string buscarPorGenero(const std::string& genero);
 };
-
 #endif
