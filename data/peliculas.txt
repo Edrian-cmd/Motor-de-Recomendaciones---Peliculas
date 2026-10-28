@@ -1,0 +1,751 @@
+ID,Titulo,Genero,Año
+1,The Shawshank Redemption,Drama,1994
+2,The Godfather,Drama,1972
+3,The Dark Knight,Accion,2008
+4,12 Angry Men,Drama,1957
+5,Schindlers List,Drama,1993
+6,The Lord of the Rings: The Return of the King,Fantasia,2003
+7,Pulp Fiction,Thriller,1994
+8,The Lord of the Rings: The Fellowship of the Ring,Fantasia,2001
+9,The Good the Bad and the Ugly,Aventura,1966
+10,Forrest Gump,Drama,1994
+11,Fight Club,Drama,1999
+12,The Lord of the Rings: The Two Towers,Fantasia,2002
+13,Inception,Sci-Fi,2010
+14,Star Wars: Episode V - The Empire Strikes Back,Sci-Fi,1980
+15,The Matrix,Sci-Fi,1999
+16,Goodfellas,Drama,1990
+17,One Flew Over the Cuckoos Nest,Drama,1975
+18,Se7en,Thriller,1995
+19,Its a Wonderful Life,Drama,1946
+20,The Silence of the Lambs,Thriller,1991
+21,Saving Private Ryan,Accion,1998
+22,City of God,Drama,2002
+23,Interstellar,Sci-Fi,2014
+24,Life Is Beautiful,Drama,1997
+25,The Green Mile,Drama,1999
+26,Star Wars: Episode IV - A New Hope,Sci-Fi,1977
+27,Terminator 2: Judgment Day,Accion,1991
+28,Back to the Future,Sci-Fi,1985
+29,Spirited Away,Animacion,2001
+30,The Pianist,Drama,2002
+31,Psycho,Terror,1960
+32,Parasite,Thriller,2019
+33,Leon: The Professional,Accion,1994
+34,The Lion King,Animacion,1994
+35,Gladiator,Accion,2000
+36,American History X,Drama,1998
+37,The Departed,Thriller,2006
+38,The Prestige,Sci-Fi,2006
+39,Whiplash,Drama,2014
+40,The Usual Suspects,Thriller,1995
+41,Casablanca,Romance,1942
+42,Grave of the Fireflies,Animacion,1988
+43,Harakiri,Drama,1962
+44,Modern Times,Comedia,1936
+45,City Lights,Comedia,1931
+46,Once Upon a Time in the West,Aventura,1968
+47,Cinema Paradiso,Drama,1988
+48,Rear Window,Thriller,1954
+49,Alien,Sci-Fi,1979
+50,Apocalypse Now,Drama,1979
+51,Memento,Thriller,2000
+52,Raiders of the Lost Ark,Aventura,1981
+53,Django Unchained,Accion,2012
+54,WALL-E,Animacion,2008
+55,The Lives of Others,Drama,2006
+56,Sunset Blvd.,Drama,1950
+57,Paths of Glory,Drama,1957
+58,The Shining,Terror,1980
+59,The Great Dictator,Comedia,1940
+60,Avengers: Infinity War,Accion,2018
+61,Witness for the Prosecution,Drama,1957
+62,Aliens,Sci-Fi,1986
+63,Spider-Man: Into the Spider-Verse,Animacion,2018
+64,American Beauty,Drama,1999
+65,Dr. Strangelove,Comedia,1964
+66,The Dark Knight Rises,Accion,2012
+67,Oldboy,Thriller,2003
+68,Inglourious Basterds,Accion,2009
+69,Amadeus,Drama,1984
+70,Coco,Animacion,2017
+71,Toy Story,Animacion,1995
+72,Braveheart,Accion,1995
+73,Joker,Drama,2019
+74,Das Boot,Drama,1981
+75,Avengers: Endgame,Accion,2019
+76,Princess Mononoke,Animacion,1997
+77,Good Will Hunting,Drama,1997
+78,Once Upon a Time in America,Drama,1984
+79,Your Name,Animacion,2016
+80,3 Idiots,Comedia,2009
+81,Singin in the Rain,Comedia,1952
+82,Requiem for a Dream,Drama,2000
+83,Toy Story 3,Animacion,2010
+84,High and Low,Thriller,1963
+85,Capernaum,Drama,2018
+86,Star Wars: Episode VI - Return of the Jedi,Sci-Fi,1983
+87,Eternal Sunshine of the Spotless Mind,Romance,2004
+88,2001: A Space Odyssey,Sci-Fi,1968
+89,Reservoir Dogs,Thriller,1992
+90,Come and See,Drama,1985
+91,The Hunt,Drama,2012
+92,Citizen Kane,Drama,1941
+93,M,Thriller,1931
+94,Bicycle Thieves,Drama,1948
+95,Lawrence of Arabia,Aventura,1962
+96,North by Northwest,Thriller,1959
+97,Vertigo,Thriller,1958
+98,Amelie,Comedia,2001
+99,The Apartment,Comedia,1960
+100,A Clockwork Orange,Sci-Fi,1971
+101,Double Indemnity,Thriller,1944
+102,Snatch,Comedia,2000
+103,Full Metal Jacket,Drama,1987
+104,Scarface,Accion,1983
+105,Hamilton,Drama,2020
+106,To Kill a Mockingbird,Drama,1962
+107,The Sting,Comedia,1973
+108,Up,Animacion,2009
+109,Taxi Driver,Drama,1976
+110,Heat,Accion,1995
+111,Metropolis,Sci-Fi,1927
+112,L.A. Confidential,Thriller,1997
+113,Die Hard,Accion,1988
+114,Incendies,Drama,2010
+115,Indiana Jones and the Last Crusade,Aventura,1989
+116,Batman Begins,Accion,2005
+117,Green Book,Comedia,2018
+118,1917,Accion,2019
+119,A Separation,Drama,2011
+120,Ran,Drama,1985
+121,Yojimbo,Accion,1961
+122,For a Few Dollars More,Aventura,1965
+123,The Father,Drama,2020
+124,My Father and My Son,Drama,2005
+125,All About Eve,Drama,1950
+126,Unforgiven,Drama,1992
+127,Some Like It Hot,Comedia,1959
+128,Casino,Drama,1995
+129,The Truman Show,Drama,1998
+130,Pan's Labyrinth,Fantasia,2006
+131,The Elephant Man,Drama,1980
+132,The Sixth Sense,Thriller,1999
+133,A Beautiful Mind,Drama,2001
+134,Jurassic Park,Sci-Fi,1993
+135,V for Vendetta,Accion,2005
+136,The Wolf of Wall Street,Comedia,2013
+137,Kill Bill: Vol. 1,Accion,2003
+138,Trainspotting,Drama,1996
+139,No Country for Old Men,Thriller,2007
+140,Shutter Island,Thriller,2010
+141,Catch Me If You Can,Drama,2002
+142,Fargo,Thriller,1996
+143,The Big Lebowski,Comedia,1998
+144,Blade Runner,Sci-Fi,1982
+145,Gran Torino,Drama,2008
+146,The Thing,Terror,1982
+147,Room,Drama,2015
+148,Deadpool,Accion,2016
+149,Logan,Accion,2017
+150,Mad Max: Fury Road,Accion,2015
+151,Harry Potter and the Deathly Hallows: Part 2,Fantasia,2011
+152,Stand by Me,Drama,1986
+153,Platoon,Drama,1986
+154,The Terminator,Accion,1984
+155,Network,Drama,1976
+156,Into the Wild,Aventura,2007
+157,The Wizard of Oz,Fantasia,1939
+158,Groundhog Day,Comedia,1993
+159,Million Dollar Baby,Drama,2004
+160,Jaws,Thriller,1975
+161,Prisoners,Thriller,2013
+162,Hacksaw Ridge,Accion,2016
+163,Gangs of New York,Drama,2002
+164,Blood Diamond,Accion,2006
+165,Spotlight,Drama,2015
+166,Amores Perros,Drama,2000
+167,Rocky,Drama,1976
+168,The Grand Budapest Hotel,Comedia,2014
+169,The Martian,Sci-Fi,2015
+170,Monsters Inc.,Animacion,2001
+171,Dead Poets Society,Drama,1989
+172,Catching Fire,Accion,2013
+173,Ford v Ferrari,Accion,2019
+174,Mary and Max,Animacion,2009
+175,Rush,Accion,2013
+176,Before Sunrise,Romance,1995
+177,Before Sunset,Romance,2004
+178,Gone with the Wind,Romance,1939
+179,Ben-Hur,Aventura,1959
+180,The Deer Hunter,Drama,1978
+181,Jurassic World,Sci-Fi,2015
+182,In the Name of the Father,Drama,1993
+183,The Iron Giant,Animacion,1999
+184,Hotel Rwanda,Drama,2004
+185,Stand and Deliver,Drama,1988
+186,Guardians of the Galaxy,Accion,2014
+187,Captain America: The Winter Soldier,Accion,2014
+188,Iron Man,Accion,2008
+189,The Avengers,Accion,2012
+190,Thor: Ragnarok,Accion,2017
+191,Spider-Man,Accion,2002
+192,Spider-Man 2,Accion,2004
+193,Spider-Man: No Way Home,Accion,2021
+194,Black Panther,Accion,2018
+195,Doctor Strange,Accion,2016
+196,The Revenant,Aventura,2015
+197,Dune: Part One,Sci-Fi,2021
+198,Dune: Part Two,Sci-Fi,2024
+199,Avatar,Sci-Fi,2009
+200,Avatar: The Way of Water,Sci-Fi,2022
+201,The Social Network,Drama,2010
+202,Arrival,Sci-Fi,2016
+203,Sicario,Thriller,2015
+204,Ex Machina,Sci-Fi,2014
+205,Her,Romance,2013
+206,Get Out,Terror,2017
+207,Hereditary,Terror,2018
+208,A Quiet Place,Terror,2018
+209,It,Terror,2017
+210,The Conjuring,Terror,2013
+211,Sinister,Terror,2012
+212,Insidious,Terror,2010
+213,Saw,Terror,2004
+214,The Ring,Terror,2002
+215,Scream,Terror,1996
+216,Halloween,Terror,1978
+217,A Nightmare on Elm Street,Terror,1984
+218,Friday the 13th,Terror,1980
+219,The Texas Chain Saw Massacre,Terror,1974
+220,The Exorcist,Terror,1973
+221,Rosemarys Baby,Terror,1968
+222,Night of the Living Dead,Terror,1968
+223,Evil Dead II,Terror,1987
+224,Army of Darkness,Fantasia,1992
+225,Dawn of the Dead,Terror,1978
+226,28 Days Later,Terror,2002
+227,Shaun of the Dead,Comedia,2004
+228,Hot Fuzz,Comedia,2007
+229,The Worlds End,Comedia,2013
+230,Zombieland,Comedia,2009
+231,Superbad,Comedia,2007
+232,Step Brothers,Comedia,2008
+233,Anchorman: The Legend of Ron Burgundy,Comedia,2004
+234,Tropic Thunder,Comedia,2008
+235,The Hangover,Comedia,2009
+236,Borat,Comedia,2006
+237,Dumb and Dumber,Comedia,1994
+238,Ace Ventura: Pet Detective,Comedia,1994
+239,The Mask,Comedia,1994
+240,Bruce Almighty,Comedia,2003
+241,Liar Liar,Comedia,1997
+242,Me Myself & Irene,Comedia,2000
+243,Click,Comedia,2006
+244,Happy Gilmore,Comedia,1996
+245,Billy Madison,Comedia,1995
+246,50 First Dates,Romance,2004
+247,The Wedding Singer,Romance,1998
+248,Just Go with It,Comedia,2011
+249,Grown Ups,Comedia,2010
+250,School of Rock,Comedia,2003
+251,Tenacious D in The Pick of Destiny,Comedia,2006
+252,Nacho Libre,Comedia,2006
+253,Elf,Comedia,2003
+254,Step Brothers,Comedia,2008
+255,Talladega Nights,Comedia,2006
+256,Zoolander,Comedia,2001
+257,Meet the Parents,Comedia,2000
+258,Meet the Fockers,Comedia,2004
+259,Night at the Museum,Comedia,2006
+260,Wedding Crashers,Comedia,2005
+261,The 40-Year-Old Virgin,Comedia,2005
+262,Knocked Up,Comedia,2007
+263,Bridesmaids,Comedia,2011
+264,Mean Girls,Comedia,2004
+265,Clueless,Comedia,1995
+266,Legally Blonde,Comedia,2001
+267,The Princess Diaries,Comedia,2001
+268,10 Things I Hate About You,Romance,1999
+269,How to Lose a Guy in 10 Days,Romance,2003
+270,The Notebook,Romance,2004
+271,A Walk to Remember,Romance,2002
+272,Crazy Stupid Love,Romance,2011
+273,La La Land,Romance,2016
+274,A Star is Born,Drama,2018
+275,The Greatest Showman,Drama,2017
+276,Bohemian Rhapsody,Drama,2018
+277,Rocketman,Drama,2019
+278,Elvis,Drama,2022
+279,Walk the Line,Drama,2005
+280,Ray,Drama,2004
+281,8 Mile,Drama,2002
+282,Straight Outta Compton,Drama,2015
+283,The Pursuit of Happyness,Drama,2006
+284,Seven Pounds,Drama,2008
+285,I Am Legend,Sci-Fi,2007
+286,Men in Black,Sci-Fi,1997
+287,Men in Black II,Sci-Fi,2002
+288,Independence Day,Sci-Fi,1996
+289,Bad Boys,Accion,1995
+290,Bad Boys II,Accion,2003
+291,Lethal Weapon,Accion,1987
+292,Lethal Weapon 2,Accion,1989
+293,Lethal Weapon 3,Accion,1992
+294,Lethal Weapon 4,Accion,1998
+295,Rush Hour,Accion,1998
+296,Rush Hour 2,Accion,2001
+297,Rush Hour 3,Accion,2007
+298,Beverly Hills Cop,Comedia,1984
+299,Top Gun,Accion,1986
+300,Top Gun: Maverick,Accion,2022
+301,Mission: Impossible,Accion,1996
+302,Mission: Impossible II,Accion,2000
+303,Mission: Impossible III,Accion,2006
+304,Mission: Impossible - Ghost Protocol,Accion,2011
+305,Mission: Impossible - Rogue Nation,Accion,2015
+306,Mission: Impossible - Fallout,Accion,2018
+307,Mission: Impossible - Dead Reckoning Part One,Accion,2023
+308,Jack Reacher,Accion,2012
+309,Minority Report,Sci-Fi,2002
+310,War of the Worlds,Sci-Fi,2005
+311,Edge of Tomorrow,Sci-Fi,2014
+312,Oblivion,Sci-Fi,2013
+313,Collateral,Thriller,2004
+314,Jerry Maguire,Romance,1996
+315,A Few Good Men,Drama,1992
+316,Rain Man,Drama,1988
+317,Born on the Fourth of July,Drama,1989
+318,The Color of Money,Drama,1986
+319,Risky Business,Comedia,1983
+320,Days of Thunder,Accion,1990
+321,The Firm,Thriller,1993
+322,Interview with the Vampire,Terror,1994
+323,Eyes Wide Shut,Drama,1999
+324,Magnolia,Drama,1999
+325,Vanilla Sky,Sci-Fi,2001
+326,The Last Samurai,Accion,2003
+327,Valkyrie,Drama,2008
+328,Tropic Thunder,Comedia,2008
+329,Knight and Day,Accion,2010
+330,The Mummy,Aventura,1999
+331,The Mummy Returns,Aventura,2001
+332,National Treasure,Aventura,2004
+333,National Treasure: Book of Secrets,Aventura,2007
+334,Pirates of the Caribbean: The Curse of the Black Pearl,Aventura,2003
+335,Pirates of the Caribbean: Dead Mans Chest,Aventura,2006
+336,Pirates of the Caribbean: At Worlds End,Aventura,2007
+337,The Chronicles of Narnia: The Lion the Witch and the Wardrobe,Fantasia,2005
+338,Harry Potter and the Sorcerers Stone,Fantasia,2001
+339,Harry Potter and the Chamber of Secrets,Fantasia,2002
+340,Harry Potter and the Prisoner of Azkaban,Fantasia,2004
+341,Harry Potter and the Goblet of Fire,Fantasia,2005
+342,Harry Potter and the Order of the Phoenix,Fantasia,2007
+343,Harry Potter and the Half-Blood Prince,Fantasia,2009
+344,Harry Potter and the Deathly Hallows: Part 1,Fantasia,2010
+345,Fantastic Beasts and Where to Find Them,Fantasia,2016
+346,The Hunger Games,Sci-Fi,2012
+347,The Hunger Games: Catching Fire,Sci-Fi,2013
+348,The Hunger Games: Mockingjay - Part 1,Sci-Fi,2014
+349,The Hunger Games: Mockingjay - Part 2,Sci-Fi,2015
+350,Divergent,Sci-Fi,2014
+351,Insurgent,Sci-Fi,2015
+352,The Maze Runner,Sci-Fi,2014
+353,Maze Runner: The Scorch Trials,Sci-Fi,2015
+354,Maze Runner: The Death Cure,Sci-Fi,2018
+355,Twilight,Romance,2008
+356,The Twilight Saga: New Moon,Romance,2009
+357,The Twilight Saga: Eclipse,Romance,2010
+358,The Twilight Saga: Breaking Dawn - Part 1,Romance,2011
+359,The Twilight Saga: Breaking Dawn - Part 2,Romance,2012
+360,Percy Jackson & the Olympians: The Lightning Thief,Fantasia,2010
+361,Eragon,Fantasia,2006
+362,The Golden Compass,Fantasia,2007
+363,Stardust,Fantasia,2007
+364,Bridge to Terabithia,Fantasia,2007
+365,Jumanji,Aventura,1995
+366,Zathura: A Space Adventure,Sci-Fi,2005
+367,Jumanji: Welcome to the Jungle,Accion,2017
+368,Jumanji: The Next Level,Accion,2019
+369,Night at the Museum: Battle of the Smithsonian,Comedia,2009
+370,Night at the Museum: Secret of the Tomb,Comedia,2014
+371,Honey I Shrunk the Kids,Comedia,1989
+372,Flubber,Comedia,1997
+373,The Nutty Professor,Comedia,1996
+374,Dr. Dolittle,Comedia,1998
+375,Mrs. Doubtfire,Comedia,1993
+376,Bicentennial Man,Sci-Fi,1999
+377,Jingle All the Way,Comedia,1996
+378,Kindergarten Cop,Comedia,1990
+379,Twins,Comedia,1988
+380,Conan the Barbarian,Fantasia,1982
+381,Predator,Sci-Fi,1987
+382,Commando,Accion,1985
+383,True Lies,Accion,1994
+384,Total Recall,Sci-Fi,1990
+385,The Running Man,Sci-Fi,1987
+386,RoboCop,Sci-Fi,1987
+387,Starship Troopers,Sci-Fi,1997
+388,Basic Instinct,Thriller,1992
+389,The Fifth Element,Sci-Fi,1997
+390,Leon,Accion,1994
+391,Lucy,Sci-Fi,2014
+392,Valerian and the City of a Thousand Planets,Sci-Fi,2017
+393,District 9,Sci-Fi,2009
+394,Elysium,Sci-Fi,2013
+395,Chappie,Sci-Fi,2015
+396,Snowpiercer,Sci-Fi,2013
+397,Okja,Aventura,2017
+398,The Host,Terror,2006
+399,Memories of Murder,Thriller,2003
+400,Train to Busan,Terror,2016
+401,Godzilla,Sci-Fi,2014
+402,Kong: Skull Island,Accion,2017
+403,Godzilla: King of the Monsters,Sci-Fi,2019
+404,Godzilla vs. Kong,Sci-Fi,2021
+405,Pacific Rim,Sci-Fi,2013
+406,Transformers,Accion,2007
+407,Transformers: Revenge of the Fallen,Accion,2009
+408,Transformers: Dark of the Moon,Accion,2011
+409,Transformers: Age of Extinction,Accion,2014
+410,Bumblebee,Accion,2018
+411,G.I. Joe: The Rise of Cobra,Accion,2009
+412,G.I. Joe: Retaliation,Accion,2013
+413,Teenage Mutant Ninja Turtles,Accion,2014
+414,Power Rangers,Accion,2017
+415,Mortal Kombat,Accion,1995
+416,Mortal Kombat,Accion,2021
+417,Street Fighter,Accion,1994
+418,Resident Evil,Accion,2002
+419,Resident Evil: Apocalypse,Accion,2004
+420,Tomb Raider,Accion,2018
+421,Lara Croft: Tomb Raider,Accion,2001
+422,Uncharted,Accion,2022
+423,Sonic the Hedgehog,Comedia,2020
+424,Sonic the Hedgehog 2,Comedia,2022
+425,The Super Mario Bros. Movie,Animacion,2023
+426,Detective Pikachu,Comedia,2019
+427,Warcraft,Fantasia,2016
+428,Assassins Creed,Accion,2016
+429,Prince of Persia: The Sands of Time,Accion,2010
+430,Silent Hill,Terror,2006
+431,Need for Speed,Accion,2014
+432,Fast & Furious,Accion,2009
+433,Fast Five,Accion,2011
+434,Fast & Furious 6,Accion,2013
+435,Furious 7,Accion,2015
+436,The Fate of the Furious,Accion,2017
+437,F9: The Fast Saga,Accion,2021
+438,Fast X,Accion,2023
+439,xXx,Accion,2002
+440,Pitch Black,Sci-Fi,2000
+441,The Chronicles of Riddick,Sci-Fi,2004
+442,Riddick,Sci-Fi,2013
+443,John Wick: Chapter 2,Accion,2017
+444,John Wick: Chapter 3 - Parabellum,Accion,2019
+445,John Wick: Chapter 4,Accion,2023
+446,Nobody,Accion,2021
+447,Bullet Train,Accion,2022
+448,Atomic Blonde,Accion,2017
+449,Kingsman: The Secret Service,Accion,2014
+450,Kingsman: The Golden Circle,Accion,2017
+451,Kick-Ass,Accion,2010
+452,Scott Pilgrim vs. the World,Comedia,2010
+453,Baby Driver,Accion,2017
+454,Hot Fuzz,Accion,2007
+455,The Nice Guys,Comedia,2016
+456,Kiss Kiss Bang Bang,Comedia,2005
+457,Lethal Weapon,Accion,1987
+458,Die Hard with a Vengeance,Accion,1995
+459,Live Free or Die Hard,Accion,2007
+460,Air Force One,Accion,1997
+461,Con Air,Accion,1997
+462,The Rock,Accion,1996
+463,Face/Off,Accion,1997
+464,Armageddon,Sci-Fi,1998
+465,Pearl Harbor,Accion,2001
+466,National Treasure,Accion,2004
+467,Ghost Rider,Accion,2007
+468,Gone in 60 Seconds,Accion,2000
+469,Drive,Accion,2011
+470,Nightcrawler,Thriller,2014
+471,Prisoners,Thriller,2013
+472,Zodiac,Thriller,2007
+473,Seven,Thriller,1995
+474,Gone Girl,Thriller,2014
+475,The Girl with the Dragon Tattoo,Thriller,2011
+476,Fight Club,Drama,1999
+477,The Social Network,Drama,2010
+478,Mank,Drama,2020
+479,The Curious Case of Benjamin Button,Drama,2008
+480,Panic Room,Thriller,2002
+481,The Game,Thriller,1997
+482,Alien 3,Sci-Fi,1992
+483,Prometheus,Sci-Fi,2012
+484,Alien: Covenant,Sci-Fi,2017
+485,The Martian,Sci-Fi,2015
+486,Blade Runner 2049,Sci-Fi,2017
+487,Dune,Sci-Fi,2021
+488,Gladiator,Accion,2000
+489,Kingdom of Heaven,Accion,2005
+490,Robin Hood,Accion,2010
+491,Exodus: Gods and Kings,Accion,2014
+492,The Last Duel,Drama,2021
+493,House of Gucci,Drama,2021
+494,Black Hawk Down,Accion,2001
+495,American Gangster,Drama,2007
+496,Hannibal,Thriller,2001
+497,Thelma & Louise,Drama,1991
+498,Legend,Aventura,1985
+499,Top Gun,Accion,1986
+500,Man on Fire,Accion,2004
+501,Deja Vu,Sci-Fi,2006
+502,Unstoppable,Accion,2010
+503,Crimson Tide,Thriller,1995
+504,Enemy of the State,Thriller,1998
+505,Spy Game,Accion,2001
+506,Domino,Accion,2005
+507,True Romance,Accion,1993
+508,Pulp Fiction,Drama,1994
+509,Jackie Brown,Drama,1997
+510,Kill Bill: Vol. 2,Accion,2004
+511,Death Proof,Accion,2007
+512,The Hateful Eight,Western,2015
+513,Once Upon a Time in Hollywood,Drama,2019
+514,Boogie Nights,Drama,1997
+515,Magnolia,Drama,1999
+516,Punch-Drunk Love,Romance,2002
+517,There Will Be Blood,Drama,2007
+518,The Master,Drama,2012
+519,Inherent Vice,Comedia,2014
+520,Phantom Thread,Drama,2017
+521,Licorice Pizza,Comedia,2021
+522,No Country for Old Men,Thriller,2007
+523,Fargo,Thriller,1996
+524,The Big Lebowski,Comedia,1998
+525,O Brother Where Art Thou?,Comedia,2000
+526,Burn After Reading,Comedia,2008
+527,True Grit,Western,2010
+528,Inside Llewyn Davis,Drama,2013
+529,Hail Caesar!,Comedia,2016
+530,The Ballad of Buster Scruggs,Comedia,2018
+531,Blood Simple,Thriller,1984
+532,Raising Arizona,Comedia,1987
+533,Millers Crossing,Drama,1990
+534,Barton Fink,Drama,1991
+535,The Hudsucker Proxy,Comedia,1994
+536,The Man Who Wasnt There,Drama,2001
+537,Intolerable Cruelty,Romance,2003
+538,The Ladykillers,Comedia,2004
+539,A Serious Man,Drama,2009
+540,A Beautiful Mind,Drama,2001
+541,Apollo 13,Drama,1995
+542,Cinderella Man,Drama,2005
+543,Frost/Nixon,Drama,2008
+544,Rush,Drama,2013
+545,In the Heart of the Sea,Aventura,2015
+546,Solo: A Star Wars Story,Sci-Fi,2018
+547,The Da Vinci Code,Thriller,2006
+548,Angels & Demons,Thriller,2009
+549,Inferno,Thriller,2016
+550,Splash,Comedia,1984
+551,Cocoon,Sci-Fi,1985
+552,Willow,Fantasia,1988
+553,Parenthood,Comedia,1989
+554,Backdraft,Accion,1991
+555,How the Grinch Stole Christmas,Comedia,2000
+556,The Missing,Western,2003
+557,Ransom,Thriller,1996
+558,EDtv,Comedia,1999
+559,The Paper,Comedia,1994
+560,Night Shift,Comedia,1982
+561,Gung Ho,Comedia,1986
+562,Far and Away,Drama,1992
+563,E.T. the Extra-Terrestrial,Sci-Fi,1982
+564,Jaws,Thriller,1975
+565,Close Encounters of the Third Kind,Sci-Fi,1977
+566,Raiders of the Lost Ark,Aventura,1981
+567,Indiana Jones and the Temple of Doom,Aventura,1984
+568,Indiana Jones and the Last Crusade,Aventura,1989
+569,Indiana Jones and the Kingdom of the Crystal Skull,Aventura,2008
+570,Schindlers List,Drama,1993
+571,Jurassic Park,Sci-Fi,1993
+572,The Lost World: Jurassic Park,Sci-Fi,1997
+573,Saving Private Ryan,Drama,1998
+574,Catch Me If You Can,Drama,2002
+575,Minority Report,Sci-Fi,2002
+576,The Terminal,Comedia,2004
+577,War of the Worlds,Sci-Fi,2005
+578,Munich,Drama,2005
+579,Lincoln,Drama,2012
+580,Bridge of Spies,Drama,2015
+581,The BFG,Fantasia,2016
+582,The Post,Drama,2017
+583,Ready Player One,Sci-Fi,2018
+584,West Side Story,Romance,2021
+585,The Fabelmans,Drama,2022
+586,Always,Romance,1989
+587,Hook,Fantasia,1991
+588,Amistad,Drama,1997
+589,A.I. Artificial Intelligence,Sci-Fi,2001
+590,War Horse,Drama,2011
+591,The Adventures of Tintin,Animacion,2011
+592,Duel,Thriller,1971
+593,The Sugarland Express,Drama,1974
+594,1941,Comedia,1979
+595,The Color Purple,Drama,1985
+596,Empire of the Sun,Drama,1987
+597,Titanic,Romance,1997
+598,Avatar,Sci-Fi,2009
+599,The Terminator,Sci-Fi,1984
+600,Terminator 2: Judgment Day,Sci-Fi,1991
+601,Aliens,Sci-Fi,1986
+602,The Abyss,Sci-Fi,1989
+603,True Lies,Accion,1994
+604,Avatar: The Way of Water,Sci-Fi,2022
+605,Piranha II: The Spawning,Terror,1982
+606,Ghosts of the Abyss,Documental,2003
+607,Aliens of the Deep,Documental,2005
+608,The Lord of the Rings: The Fellowship of the Ring,Fantasia,2001
+609,The Lord of the Rings: The Two Towers,Fantasia,2002
+610,The Lord of the Rings: The Return of the King,Fantasia,2003
+611,The Hobbit: An Unexpected Journey,Fantasia,2012
+612,The Hobbit: The Desolation of Smaug,Fantasia,2013
+613,The Hobbit: The Battle of the Five Armies,Fantasia,2014
+614,King Kong,Accion,2005
+615,The Lovely Bones,Drama,2009
+616,Bad Taste,Comedia,1987
+617,Meet the Feebles,Comedia,1989
+618,Braindead,Terror,1992
+619,Heavenly Creatures,Drama,1994
+620,The Frighteners,Comedia,1996
+621,They Shall Not Grow Old,Documental,2018
+622,The Beatles: Get Back - The Rooftop Concert,Musical,2022
+623,The Batman,Accion,2022
+624,Dawn of the Planet of the Apes,Sci-Fi,2014
+625,War for the Planet of the Apes,Sci-Fi,2017
+626,Cloverfield,Sci-Fi,2008
+627,Let Me In,Terror,2010
+628,The Pallbearer,Comedia,1996
+629,Snowpiercer,Sci-Fi,2013
+630,Okja,Sci-Fi,2017
+631,Parasite,Thriller,2019
+632,Barking Dogs Never Bite,Comedia,2000
+633,Memories of Murder,Thriller,2003
+634,The Host,Sci-Fi,2006
+635,Mother,Drama,2009
+636,Shoplifters,Drama,2018
+637,Broker,Drama,2022
+638,Like Father Like Son,Drama,2013
+639,Nobody Knows,Drama,2004
+640,Still Walking,Drama,2008
+641,I Wish,Drama,2011
+642,Our Little Sister,Drama,2015
+643,After the Storm,Drama,2016
+644,The Third Murder,Thriller,2017
+645,The Truth,Drama,2019
+646,Drive My Car,Drama,2021
+647,Wheel of Fortune and Fantasy,Romance,2021
+648,Asako I & II,Romance,2018
+649,Happy Hour,Drama,2015
+650,In the Mood for Love,Romance,2000
+651,Chungking Express,Romance,1994
+652,Fallen Angels,Romance,1995
+653,Happy Together,Romance,1997
+654,2046,Romance,2004
+655,The Grandmaster,Accion,2013
+656,Days of Being Wild,Drama,1990
+657,As Tears Go By,Drama,1988
+658,Ashes of Time,Accion,1994
+659,My Blueberry Nights,Romance,2007
+660,Crouching Tiger Hidden Dragon,Accion,2000
+661,Brokeback Mountain,Romance,2005
+662,Life of Pi,Aventura,2012
+663,Sense and Sensibility,Romance,1995
+664,Lust Caution,Romance,2007
+665,The Ice Storm,Drama,1997
+666,Hulk,Accion,2003
+667,Pushing Hands,Comedia,1991
+668,The Wedding Banquet,Comedia,1993
+669,Eat Drink Man Woman,Comedia,1994
+670,Ride with the Devil,Western,1999
+671,Taking Woodstock,Comedia,2009
+672,Billy Lynns Long Halftime Walk,Drama,2016
+673,Gemini Man,Sci-Fi,2019
+674,Spirited Away,Animacion,2001
+675,Princess Mononoke,Animacion,1997
+676,My Neighbor Totoro,Animacion,1988
+677,Howls Moving Castle,Animacion,2004
+678,Ponyo,Animacion,2008
+679,Kikis Delivery Service,Animacion,1989
+680,Castle in the Sky,Animacion,1986
+681,Nausicaa of the Valley of the Wind,Animacion,1984
+682,Porco Rosso,Animacion,1992
+683,The Wind Rises,Animacion,2013
+684,The Boy and the Heron,Animacion,2023
+685,Lupin III: The Castle of Cagliostro,Animacion,1979
+686,The Tale of the Princess Kaguya,Animacion,2013
+687,Grave of the Fireflies,Animacion,1988
+688,Only Yesterday,Animacion,1991
+689,Pom Poko,Animacion,1994
+690,My Neighbors the Yamadas,Animacion,1999
+691,Whisper of the Heart,Animacion,1995
+692,The Cat Returns,Animacion,2002
+693,The Secret World of Arrietty,Animacion,2010
+694,From Up on Poppy Hill,Animacion,2011
+695,When Marnie Was There,Animacion,2014
+696,Earwig and the Witch,Animacion,2020
+697,Akira,Animacion,1988
+698,Ghost in the Shell,Animacion,1995
+699,Perfect Blue,Animacion,1997
+700,Paprika,Animacion,2006
+701,Millennium Actress,Animacion,2001
+702,Tokyo Godfathers,Animacion,2003
+703,Your Name,Animacion,2016
+704,Weathering with You,Animacion,2019
+705,Suzume,Animacion,2022
+706,The Garden of Words,Animacion,2013
+707,5 Centimeters per Second,Animacion,2007
+708,Children Who Chase Lost Voices,Animacion,2011
+709,The Place Promised in Our Early Days,Animacion,2004
+710,Voices of a Distant Star,Animacion,2002
+711,A Silent Voice,Animacion,2016
+712,Wolf Children,Animacion,2012
+713,Summer Wars,Animacion,2009
+714,The Girl Who Leapt Through Time,Animacion,2006
+715,The Boy and the Beast,Animacion,2015
+716,Mirai,Animacion,2018
+717,Belle,Animacion,2021
+718,Redline,Animacion,2009
+719,Sword of the Stranger,Animacion,2007
+720,Ninja Scroll,Animacion,1993
+721,Vampire Hunter D: Bloodlust,Animacion,2000
+722,Jin-Roh: The Wolf Brigade,Animacion,1999
+723,Metropolis,Animacion,2001
+724,Steamboy,Animacion,2004
+725,Tekkonkinkreet,Animacion,2006
+726,Mind Game,Animacion,2004
+727,The Night Is Short Walk on Girl,Animacion,2017
+728,Lu Over the Wall,Animacion,2017
+729,Ride Your Wave,Animacion,2019
+730,Inu-Oh,Animacion,2021
+731,Promare,Animacion,2019
+732,Dead Leaves,Animacion,2004
+733,Redline,Animacion,2009
+734,The Animatrix,Animacion,2003
+735,Batman: Mask of the Phantasm,Animacion,1993
+736,Batman: Under the Red Hood,Animacion,2010
+737,Batman: The Dark Knight Returns Part 1,Animacion,2012
+738,Batman: The Dark Knight Returns Part 2,Animacion,2013
+739,Justice League: The Flashpoint Paradox,Animacion,2013
+740,Spider-Man: Into the Spider-Verse,Animacion,2018
+741,Spider-Man: Across the Spider-Verse,Animacion,2023
+742,The Iron Giant,Animacion,1999
+743,Coraline,Animacion,2009
+744,Kubo and the Two Strings,Animacion,2016
+745,ParaNorman,Animacion,2012
+746,The Boxtrolls,Animacion,2014
+747,Missing Link,Animacion,2019
+748,Corpse Bride,Animacion,2005
+749,Frankenweenie,Animacion,2012
+750,The Nightmare Before Christmas,Animacion,1993
