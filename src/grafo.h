@@ -1,10 +1,6 @@
 #ifndef GRAFO_H
 #define GRAFO_H
 
-// Integrante 4: El Analista Social (Simulador de Afinidad)
-// Grafo no dirigido ponderado implementado con Listas de Adyacencia
-// usando exclusivamente punteros y memoria dinamica (new/delete).
-// Los vertices son Usuarios y el peso de las aristas es la Similitud de Jaccard.
 
 #include <string>
 

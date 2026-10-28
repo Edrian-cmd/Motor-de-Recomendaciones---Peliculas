@@ -7,11 +7,6 @@
 
 using namespace std;
 
-// ================= DATOS DE PRUEBA (MOCK) =================
-// TEMPORAL (Entregable 2): Mismo catalogo y usuario activo que el Integrante 3
-// mas 4 usuarios simulados para poblar el Grafo de Afinidad Social.
-// En el Entregable 3 se conectara con el Hash (Int.1) y Perfiles (Int.2).
-
 struct PeliculaMock {
     int id;
     string titulo;

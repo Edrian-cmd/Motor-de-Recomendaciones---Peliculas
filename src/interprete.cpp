@@ -2,11 +2,23 @@
 #include "lexer.h"
 #include "parser.h"
 #include "modulos.h"
+#include "recomendador.h"
+#include "afinidad.h"
 #include <iostream>
 #include <vector>
 #include <chrono>
+#include <fstream>
 
 using namespace std;
+
+static string rutaCatalogo() {
+    const char* candidatas[] = { "data/peliculas.txt", "../data/peliculas.txt", "peliculas.txt" };
+    for (int i = 0; i < 3; i++) {
+        ifstream f(candidatas[i]);
+        if (f.is_open()) return candidatas[i];
+    }
+    return "data/peliculas.txt";
+}
 
 Interprete::Interprete() : modoDev(false) {}
 
@@ -41,8 +53,16 @@ string Interprete::despachar(const Comando& cmd) {
         case TipoComando::DESCUBRIR:     return descubrir();
         case TipoComando::SIGUIENTE:     return siguiente();
         case TipoComando::AFINIDAD:      return afinidad(cmd.usuario);
-        case TipoComando::DEV_ON:        modoDev = true;  return "Modo desarrollador activado";
-        case TipoComando::DEV_OFF:       modoDev = false; return "Modo desarrollador desactivado";
+        case TipoComando::DEV_ON:
+            modoDev = true;
+            recomendadorModoDev(true);
+            afinidadModoDev(true);
+            return "Modo desarrollador activado";
+        case TipoComando::DEV_OFF:
+            modoDev = false;
+            recomendadorModoDev(false);
+            afinidadModoDev(false);
+            return "Modo desarrollador desactivado";
         case TipoComando::AYUDA:         return textoAyuda();
         case TipoComando::SALIR:         return "";
     }
@@ -52,8 +72,9 @@ string Interprete::despachar(const Comando& cmd) {
 void Interprete::ejecutar() {
     cout << "=== MOTOR DE RECOMENDACIONES DE PELICULAS - GRUPO 5 ===\n";
     cout << "Escribe 'ayuda' para ver los comandos.\n";
+    cout << "Ejemplos: buscar id 104 | recomendar top 3 | afinidad usuario 1 | ayuda\n";
 
-    if (!cargarCatalogo("../data/peliculas.txt"))
+        if (!cargarCatalogo(rutaCatalogo()))
         cout << "Aviso: no se pudo cargar el catalogo.\n";
 
     string linea;

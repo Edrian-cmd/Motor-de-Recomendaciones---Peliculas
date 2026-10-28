@@ -1,11 +1,6 @@
 #ifndef MODULOS_H
 #define MODULOS_H
 
-// CONTRATO ENTRE EL INTERPRETE (Integrante 5) Y LOS MODULOS DEL GRUPO.
-// Cada integrante implementa sus funciones EXACTAMENTE con estas firmas
-// e incluye este archivo en su .cpp para que el compilador verifique.
-// Todas devuelven el texto que se mostrara al usuario.
-
 #include <string>
 
 // ---- Integrante 1: Bibliotecario (Hash + AVL) ----
@@ -21,10 +16,6 @@ std::string verHistorial();
 std::string descubrir();
 std::string siguiente();
 
-// ---- Integrante 3: Matematico (Max-Heap) ----
-// genero vacio ("") significa "sin filtro de genero".
-// recomendar() guarda internamente la ultima lista para que explicar() funcione.
-// Si el id no esta en esa ultima lista, explicar() devuelve un mensaje de error.
 std::string recomendar(int n, const std::string& genero);
 std::string explicar(int id);
 
