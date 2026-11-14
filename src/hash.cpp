@@ -1,4 +1,6 @@
 #include "hash.h"
+#include <iostream>
+#include <cmath> // Para abs()
 
 TablaHash::TablaHash() {
     for(int i = 0; i < 1009; i++) {
@@ -7,8 +9,8 @@ TablaHash::TablaHash() {
 }
 
 void TablaHash::insertar(int id, std::string titulo, std::string genero, int anio) {
-    // Funcion Hash: Modulo del tamaño del arreglo para calcular la posicion
-    int indice = id % 1009;
+    // Funcion Hash protegida contra IDs negativos
+    int indice = std::abs(id) % 1009;
     int inicio = indice;
 
     // Resolucion de Colisiones: Exploracion Lineal (Linear Probing)
@@ -19,8 +21,11 @@ void TablaHash::insertar(int id, std::string titulo, std::string genero, int ani
         // Si el espacio esta ocupado, avanzamos al siguiente indice disponible
         indice = (indice + 1) % 1009;
         
-        // Si dimos la vuelta completa, el arreglo esta lleno
-        if (indice == inicio) return; 
+        // Si dimos la vuelta completa, el arreglo esta lleno (mas de 1009 elementos)
+        if (indice == inicio) {
+            std::cout << "[ADVERTENCIA] Capacidad maxima de la Tabla Hash (1009) alcanzada. No se pudo insertar: " << titulo << std::endl;
+            return; 
+        }
     }
 
     // Creacion del Nodo usando Memoria Dinamica
@@ -35,7 +40,7 @@ void TablaHash::insertar(int id, std::string titulo, std::string genero, int ani
 }
 
 std::string TablaHash::buscar(int id) {
-    int indice = id % 1009;
+    int indice = std::abs(id) % 1009;
     int inicio = indice;
 
     // Buscamos la pelicula siguiendo la misma ruta de colisiones

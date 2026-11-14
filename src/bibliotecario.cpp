@@ -25,7 +25,7 @@ bool cargarCatalogo(const string& ruta) {
         stringstream ss(linea);
         string id_str, titulo, genero, anio_str;
 
-        // Separar los datos por coma (ajusta a ';' si tu archivo usa punto y coma)
+        // Separar los datos por coma
         getline(ss, id_str, ',');
         getline(ss, titulo, ',');
         getline(ss, genero, ',');
@@ -55,5 +55,9 @@ string buscarPorId(int id) {
 }
 
 string buscarPorGenero(const string& genero) {
-    return "Resultado desde Arbol AVL: Filtrando genero " + genero;
+    return miCatalogoAVL.buscarPorGenero(genero);
+}
+
+string buscarPorAnio(int desde, int hasta) {
+    return miCatalogoAVL.buscarPorAnio(desde, hasta);
 }
