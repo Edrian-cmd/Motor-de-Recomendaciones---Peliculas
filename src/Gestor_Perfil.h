@@ -1,37 +1,29 @@
-#ifndef GESTORPERFIL_H
-#define GESTORPERFIL_H
+#ifndef GESTOR_PERFIL_H
+#define GESTOR_PERFIL_H
 
-#include <iostream>
 #include <string>
+#include "modelo.h"
 
-using namespace std;
+std::string calificar(int idPelicula, int estrellas);
 
-struct Historial {
-    int id_pelicula;
-    string accion;
-    Historial* next;
-    Historial* back;
-};
+std::string deshacer();
 
-struct Pila {
-    string descripcion_accion;
-    Pila* next;
-};
+std::string verHistorial();
 
-struct Cola {
-    int id_pelicula;
-    Cola* next;
-};
+std::string descubrir();
 
-void agregarAlHistorial(Historial*& head, int id, string accion);
-void mostrarHistorial(Historial* head);
+std::string siguiente();
 
-void registrarAccion(Pila*& tope, string accion);
-void deshacerUltimaAccion(Pila*& tope);
+int usuarioActivo();
 
-void encolarPelicula(Cola*& frente, Cola*& final, int id);
-void mostrarSiguienteDescubrimiento(Cola*& frente);
+int estrellasDelActivo(int idPelicula);
 
-void cargarMocksGestorPerfiles(Historial*& cabeza, Pila*& tope, Cola*& frente, Cola*& final);
+int calificacionesDelActivo(Calificacion* destino, int max);
+
+void perfilCargarCalificacion(int idPelicula, int estrellas);
+
+void perfilCambiarUsuario(int idUsuario);
+
+void limpiarMemoriaPerfiles();
 
 #endif
