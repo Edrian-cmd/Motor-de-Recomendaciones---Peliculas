@@ -12,9 +12,12 @@
 
 struct Candidato {
     int id;
-    double puntaje;         // 0 a 100
-    double compGenero;      // 0 a 1, afinidad del usuario con el genero
-    double compCalidad;     // 0 a 1, rating promedio / 5
+    double puntaje;           // 0 a 100
+    double compGenero;        // 0 a 1, afinidad del usuario con el genero
+    double compCalidad;       // 0 a 1, promedio bayesiano / 5
+    double compPopularidad;   // 0 a 1, numVotos / maximo de votos del catalogo
+    double compColaborativo;  // 0 a 1, puntajeColaborativo() del grafo (Int.4)
+    int usadasGenero;         // calificaciones del usuario en ese genero (para explicar)
 };
 
 class MaxHeap {
