@@ -1,21 +1,42 @@
 #include "avl.h"
-#include <algorithm> // Para std::max
+#include <algorithm>
 
 ArbolAVL::ArbolAVL() {
     raiz = nullptr;
+    rotacionesTotales = 0;
+    nodosVisitadosUltimaBusqueda = 0;
 }
 
-int ArbolAVL::obtenerAltura(NodoAVL* nodo) {
+ArbolAVL::~ArbolAVL() {
+    limpiar();
+}
+
+// Recorrido post-orden para liberar memoria dinamica: O(n)
+void ArbolAVL::destruirNodo(NodoAVL* nodo) {
+    if (nodo == nullptr) return;
+    destruirNodo(nodo->izq);
+    destruirNodo(nodo->der);
+    delete nodo;
+}
+
+void ArbolAVL::limpiar() {
+    destruirNodo(raiz);
+    raiz = nullptr;
+    rotacionesTotales = 0;
+    nodosVisitadosUltimaBusqueda = 0;
+}
+
+int ArbolAVL::obtenerAltura(NodoAVL* nodo) const {
     if (nodo == nullptr) return 0;
     return nodo->altura;
 }
 
-int ArbolAVL::obtenerBalance(NodoAVL* nodo) {
+int ArbolAVL::obtenerBalance(NodoAVL* nodo) const {
     if (nodo == nullptr) return 0;
     return obtenerAltura(nodo->izq) - obtenerAltura(nodo->der);
 }
 
-// Rotacion Simple a la Derecha
+// Rotacion Simple a la Derecha: O(1)
 NodoAVL* ArbolAVL::rotarDerecha(NodoAVL* y) {
     NodoAVL* x = y->izq;
     NodoAVL* T2 = x->der;
@@ -25,10 +46,11 @@ NodoAVL* ArbolAVL::rotarDerecha(NodoAVL* y) {
 
     y->altura = std::max(obtenerAltura(y->izq), obtenerAltura(y->der)) + 1;
     x->altura = std::max(obtenerAltura(x->izq), obtenerAltura(x->der)) + 1;
+    rotacionesTotales++;
     return x;
 }
 
-// Rotacion Simple a la Izquierda
+// Rotacion Simple a la Izquierda: O(1)
 NodoAVL* ArbolAVL::rotarIzquierda(NodoAVL* x) {
     NodoAVL* y = x->der;
     NodoAVL* T2 = y->izq;
@@ -38,12 +60,12 @@ NodoAVL* ArbolAVL::rotarIzquierda(NodoAVL* x) {
 
     x->altura = std::max(obtenerAltura(x->izq), obtenerAltura(x->der)) + 1;
     y->altura = std::max(obtenerAltura(y->izq), obtenerAltura(y->der)) + 1;
+    rotacionesTotales++;
     return y;
 }
 
-// Insercion Recursiva ordenada por ANIO
-NodoAVL* ArbolAVL::insertarNodo(NodoAVL* nodo, int id, std::string titulo, std::string genero, int anio) {
-    // 1. Insercion estandar de Arbol Binario
+// Insercion recursiva balanceada ordenada por ANIO: O(log n)
+NodoAVL* ArbolAVL::insertarNodo(NodoAVL* nodo, int id, const std::string& titulo, const std::string& genero, int anio) {
     if (nodo == nullptr) {
         NodoAVL* nuevoNodo = new NodoAVL;
         nuevoNodo->id = id;
@@ -56,27 +78,21 @@ NodoAVL* ArbolAVL::insertarNodo(NodoAVL* nodo, int id, std::string titulo, std::
         return nuevoNodo;
     }
 
-    // Evitamos insertar el mismo ID si coincide en el nodo actual
     if (id == nodo->id) return nodo;
 
-    // Ordenamiento por Anio (si el anio se repite, se inserta a la derecha)
     if (anio < nodo->anio)
         nodo->izq = insertarNodo(nodo->izq, id, titulo, genero, anio);
     else
         nodo->der = insertarNodo(nodo->der, id, titulo, genero, anio);
 
-    // 2. Actualizar la altura del nodo actual
     nodo->altura = 1 + std::max(obtenerAltura(nodo->izq), obtenerAltura(nodo->der));
-
-    // 3. Obtener el factor de balanceo (-1, 0, 1)
     int balance = obtenerBalance(nodo);
 
-    // 4. Aplicar rotaciones si se pierde el equilibrio
     // Caso Izquierda-Izquierda
     if (balance > 1 && obtenerBalance(nodo->izq) >= 0)
         return rotarDerecha(nodo);
 
-    // Caso Izquierda-Derecha (Rotacion Doble)
+    // Caso Izquierda-Derecha
     if (balance > 1 && obtenerBalance(nodo->izq) < 0) {
         nodo->izq = rotarIzquierda(nodo->izq);
         return rotarDerecha(nodo);
@@ -86,7 +102,7 @@ NodoAVL* ArbolAVL::insertarNodo(NodoAVL* nodo, int id, std::string titulo, std::
     if (balance < -1 && obtenerBalance(nodo->der) <= 0)
         return rotarIzquierda(nodo);
 
-    // Caso Derecha-Izquierda (Rotacion Doble)
+    // Caso Derecha-Izquierda
     if (balance < -1 && obtenerBalance(nodo->der) > 0) {
         nodo->der = rotarDerecha(nodo->der);
         return rotarIzquierda(nodo);
@@ -95,14 +111,15 @@ NodoAVL* ArbolAVL::insertarNodo(NodoAVL* nodo, int id, std::string titulo, std::
     return nodo;
 }
 
-void ArbolAVL::insertar(int id, std::string titulo, std::string genero, int anio) {
+void ArbolAVL::insertar(int id, const std::string& titulo, const std::string& genero, int anio) {
     raiz = insertarNodo(raiz, id, titulo, genero, anio);
 }
 
-// Recorrido recursivo In-Order para filtrar por genero (ordenado por anio)
+// Recorrido In-Order para filtrar por genero ordenado por anio: O(n)
 void ArbolAVL::buscarPorGeneroNodo(NodoAVL* nodo, const std::string& genero, std::string& resultado, int& contador) {
     if (nodo == nullptr) return;
 
+    nodosVisitadosUltimaBusqueda++;
     buscarPorGeneroNodo(nodo->izq, genero, resultado, contador);
 
     if (nodo->genero == genero) {
@@ -116,6 +133,7 @@ void ArbolAVL::buscarPorGeneroNodo(NodoAVL* nodo, const std::string& genero, std
 std::string ArbolAVL::buscarPorGenero(const std::string& genero) {
     std::string resultado = "=== Peliculas del genero: " + genero + " ===\n";
     int contador = 0;
+    nodosVisitadosUltimaBusqueda = 0;
 
     buscarPorGeneroNodo(raiz, genero, resultado, contador);
 
@@ -126,9 +144,11 @@ std::string ArbolAVL::buscarPorGenero(const std::string& genero) {
     return resultado;
 }
 
-// Recorrido recursivo aprovechando el ordenamiento por anio del AVL
+// Busqueda por rango de anios con poda de subarboles: O(log n + k)
 void ArbolAVL::buscarPorAnioNodo(NodoAVL* nodo, int desde, int hasta, std::string& resultado, int& contador) {
     if (nodo == nullptr) return;
+
+    nodosVisitadosUltimaBusqueda++;
 
     if (nodo->anio >= desde)
         buscarPorAnioNodo(nodo->izq, desde, hasta, resultado, contador);
@@ -145,6 +165,7 @@ void ArbolAVL::buscarPorAnioNodo(NodoAVL* nodo, int desde, int hasta, std::strin
 std::string ArbolAVL::buscarPorAnio(int desde, int hasta) {
     std::string resultado = "=== Peliculas entre " + std::to_string(desde) + " y " + std::to_string(hasta) + " ===\n";
     int contador = 0;
+    nodosVisitadosUltimaBusqueda = 0;
 
     buscarPorAnioNodo(raiz, desde, hasta, resultado, contador);
 
@@ -153,4 +174,16 @@ std::string ArbolAVL::buscarPorAnio(int desde, int hasta) {
     }
     resultado += "Total encontradas: " + std::to_string(contador);
     return resultado;
+}
+
+int ArbolAVL::obtenerAlturaRaiz() const {
+    return obtenerAltura(raiz);
+}
+
+int ArbolAVL::obtenerRotacionesTotales() const {
+    return rotacionesTotales;
+}
+
+int ArbolAVL::obtenerNodosVisitados() const {
+    return nodosVisitadosUltimaBusqueda;
 }
