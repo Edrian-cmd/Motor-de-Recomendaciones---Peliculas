@@ -4,39 +4,48 @@ Todo lo relacionado a Github y VS Code ya seria cuestion de aprender a usarlo ut
 
 # Motor de Recomendaciones de Peliculas - Grupo 5
 
-## Compilar y ejecutar (desde la raiz del repositorio)
+## Compilar y ejecutar
 
-    compilar              (genera motor.exe)
-    motor.exe
+Abre en VS Code la carpeta del repositorio (`Motor-de-Recomendaciones---Peliculas`) y en la terminal:
 
-    compilar pruebas      (compila y ejecuta las pruebas de los modulos)
+    .\compilar.bat              (genera motor.exe)
+    .\motor.exe
 
-O a mano:
+    .\compilar.bat pruebas      (compila y ejecuta las pruebas de los modulos)
 
-    g++ -std=c++11 -Wall -Wextra -Isrc src/*.cpp -o motor.exe
+Para repetir una sesion de ejemplo: `Get-Content tests\sesion_demo.txt | .\motor.exe`
+
+Al escribir `salir` se guardan `data/usuarios.txt` y `data/calificaciones.txt`.
 
 ## Comandos
+
+Lo que va entre `< >` se reemplaza por un valor, **sin escribir los signos** (`usuario 4`, no `usuario <4>`).
 
     buscar id <n> | buscar genero "<texto>" | buscar anio <a>[..<b>]
     calificar id <n> <1-5> | deshacer | historial
     recomendar top <n> [genero "<texto>"] | explicar id <n>
     descubrir | siguiente
     afinidad usuario <n> | usuario <n>
+    estadisticas | comparar id <n> | comparar anio <a>[..<b>]
     dev on | dev off | ayuda | salir
 
-## Modulos (contrato en src/modulos.h, datos en src/modelo.h)
+## Modulos (una carpeta por modulo dentro de src/)
 
-| Integrante | Archivos | Estructuras |
+| Carpeta | Integrante | Estructuras |
 |---|---|---|
-| 1 Bibliotecario | bibliotecario.cpp, hash.*, avl.* | Tabla Hash (sondeo lineal), Arbol AVL por anio |
-| 2 Gestor de Perfiles | Gestor_Perfil.* | Lista doble (historial), Pila (deshacer), Cola (descubrir) |
-| 3 Matematico | recomendador.*, maxheap.* | Max-Heap para el Top-N, promedio bayesiano |
-| 4 Analista Social | afinidad.*, grafo.* | Grafo con listas de adyacencia, Jaccard |
-| 5 Interprete | lexer.*, parser.*, ast.*, token.*, interprete.* | AFD + parser descendente recursivo |
-| Integracion | calificaciones.cpp | Carga data/calificaciones.txt y cambio de usuario |
+| contrato/ | 5 | modulos.h (funciones entre modulos), modelo.h (Pelicula, Calificacion) |
+| catalogo/ | 1 | Tabla Hash (sondeo lineal), Arbol AVL por anio |
+| perfiles/ | 2 | Lista doble (historial), Pila (deshacer), Cola (descubrir) |
+| recomendador/ | 3 | Max-Heap para el Top-N, promedio bayesiano |
+| afinidad/ | 4 | Grafo con listas de adyacencia, Jaccard |
+| interprete/ | 5 | AFD (lexer) + parser descendente recursivo |
+| persistencia/ | 5 | Listas enlazadas de usuarios y calificaciones, carga y guardado |
+| estadisticas/ | 5 | Resumen del catalogo y del usuario (usa el Max-Heap) |
+
+Mas detalle en `docs/CONTEXTO_PROYECTO.md` y reglas de trabajo en `CLAUDE.md`.
 
 ## Datos
 
 - data/peliculas.txt: `ID,Titulo,Genero,Anio` (702 peliculas, sin duplicados).
-- data/calificaciones.txt: `idUsuario,idPelicula,estrellas` (40 usuarios con gustos
-  distintos; el usuario 1 es el activo al iniciar). Las lineas que empiezan con `#` se ignoran.
+- data/usuarios.txt: `ID,Nombre` (50 usuarios; el usuario 1 es el activo al iniciar).
+- data/calificaciones.txt: `IDUsuario,IDPelicula,Estrellas` (~1450 calificaciones con gustos por genero).
