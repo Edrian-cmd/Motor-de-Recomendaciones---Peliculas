@@ -128,9 +128,11 @@ Comando* Parser::parsearBuscar() {
 
 Comando* Parser::parsearCalificar() {
     int id, calificacion;
+    // --- TAREA 1: LA VERIFICACIÓN DE GRAMÁTICA (El guardia de seguridad) ---
     if (!esperar(TipoToken::ID, "'id'")) return nullptr;
     if (!leerEntero(id)) return nullptr;
     if (!leerEntero(calificacion)) return nullptr;
+    // --- TAREA 2: EL ENCAPSULAMIENTO DE INTENCIÓN (El cajero) ---
     Comando* c = nuevo(TipoComando::CALIFICAR);
     c->id = id;
     c->calificacion = calificacion;

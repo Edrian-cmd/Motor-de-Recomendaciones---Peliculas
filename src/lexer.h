@@ -7,11 +7,11 @@
 
 class Lexer {
     public: 
-        explicit Lexer(const std::string& linea); 
+        explicit Lexer(const std::string& linea);  //"Metodo Constructor"
         std::vector<Token> tokenizar();
     
     private:
-        std::string linea; 
+        std::string linea; //"Atributo"
 }; 
 
 #endif

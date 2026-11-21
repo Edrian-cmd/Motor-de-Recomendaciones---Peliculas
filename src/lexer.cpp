@@ -1,6 +1,7 @@
 #include "lexer.h"
-#include <unordered_map>
-#include <cctype>
+#include <unordered_map> //Mapa Hash es practicamente similar a un diccionario en paython, almacena datos en forma de pares   
+//unordered seria catalogado como un contenedor asociativo (por "clave" y "valor") es una header. 
+#include <cctype> //clasificar caracteres
 #include <cstdlib>
 
 using namespace std; 
