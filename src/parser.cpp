@@ -66,6 +66,7 @@ Comando* Parser::parsear() {
         case TipoToken::EXPLICAR:   pos++; cmd = parsearExplicar();   break;
         case TipoToken::AFINIDAD:   pos++; cmd = parsearAfinidad();   break;
         case TipoToken::DEV:        pos++; cmd = parsearDev();        break;
+        case TipoToken::USUARIO:    pos++; cmd = parsearUsuario();    break;
         case TipoToken::DESHACER:   pos++; cmd = nuevo(TipoComando::DESHACER);  break;
         case TipoToken::HISTORIAL:  pos++; cmd = nuevo(TipoComando::HISTORIAL); break;
         case TipoToken::DESCUBRIR:  pos++; cmd = nuevo(TipoComando::DESCUBRIR); break;
@@ -168,6 +169,14 @@ Comando* Parser::parsearAfinidad() {
     if (!esperar(TipoToken::USUARIO, "'usuario'")) return nullptr;
     if (!leerEntero(usuario)) return nullptr;
     Comando* c = nuevo(TipoComando::AFINIDAD);
+    c->usuario = usuario;
+    return c;
+}
+
+Comando* Parser::parsearUsuario() {
+    int usuario;
+    if (!leerEntero(usuario)) return nullptr;
+    Comando* c = nuevo(TipoComando::CAMBIAR_USUARIO);
     c->usuario = usuario;
     return c;
 }

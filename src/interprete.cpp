@@ -11,13 +11,23 @@
 
 using namespace std;
 
-static string rutaCatalogo() {
-    const char* candidatas[] = { "data/peliculas.txt", "../data/peliculas.txt", "peliculas.txt" };
+// Interruptor global del modo desarrollador (contrato v2: modoDevActivo).
+// Lo consultan todos los modulos para agregar su diagnostico [DEV].
+static bool modoDevGlobal = false;
+
+bool modoDevActivo() {
+    return modoDevGlobal;
+}
+
+// Busca un archivo de datos tanto si el programa se ejecuta desde la raiz del
+// repositorio como desde src/ o junto al archivo.
+static string rutaDatos(const string& archivo) {
+    string candidatas[] = { "data/" + archivo, "../data/" + archivo, archivo };
     for (int i = 0; i < 3; i++) {
-        ifstream f(candidatas[i]);
+        ifstream f(candidatas[i].c_str());
         if (f.is_open()) return candidatas[i];
     }
-    return "data/peliculas.txt";
+    return "data/" + archivo;
 }
 
 Interprete::Interprete() : modoDev(false) {}
@@ -34,7 +44,8 @@ string Interprete::textoAyuda() const {
         "  deshacer                   deshacer la ultima accion\n"
         "  historial                  ver el historial\n"
         "  descubrir / siguiente      modo descubrimiento rapido\n"
-        "  afinidad usuario <n>       usuarios afines\n"
+        "  afinidad usuario <n>       afinidad (Jaccard) con otro usuario\n"
+        "  usuario <n>                cambiar el usuario activo\n"
         "  dev on | dev off           modo desarrollador\n"
         "  ayuda                      mostrar esta ayuda\n"
         "  salir                      terminar";
@@ -53,13 +64,16 @@ string Interprete::despachar(const Comando& cmd) {
         case TipoComando::DESCUBRIR:     return descubrir();
         case TipoComando::SIGUIENTE:     return siguiente();
         case TipoComando::AFINIDAD:      return afinidad(cmd.usuario);
+        case TipoComando::CAMBIAR_USUARIO: return cambiarUsuario(cmd.usuario);
         case TipoComando::DEV_ON:
             modoDev = true;
+            modoDevGlobal = true;
             recomendadorModoDev(true);
             afinidadModoDev(true);
             return "Modo desarrollador activado";
         case TipoComando::DEV_OFF:
             modoDev = false;
+            modoDevGlobal = false;
             recomendadorModoDev(false);
             afinidadModoDev(false);
             return "Modo desarrollador desactivado";
@@ -72,15 +86,34 @@ string Interprete::despachar(const Comando& cmd) {
 void Interprete::ejecutar() {
     cout << "=== MOTOR DE RECOMENDACIONES DE PELICULAS - GRUPO 5 ===\n";
     cout << "Escribe 'ayuda' para ver los comandos.\n";
-    cout << "Ejemplos: buscar id 104 | recomendar top 3 | afinidad usuario 1 | ayuda\n";
+    cout << "Ejemplos: buscar id 104 | recomendar top 3 | afinidad usuario 2 | ayuda\n";
 
-        if (!cargarCatalogo(rutaCatalogo()))
-        cout << "Aviso: no se pudo cargar el catalogo.\n";
+    if (!cargarCatalogo(rutaDatos("peliculas.txt"))) {
+        cout << "Aviso: no se pudo cargar el catalogo (data/peliculas.txt).\n";
+    } else {
+        cout << "Catalogo: " << totalPeliculas() << " peliculas.";
+        int filas = cargarCalificaciones(rutaDatos("calificaciones.txt"));
+        if (filas < 0)
+            cout << " Aviso: no se encontro data/calificaciones.txt (sin comunidad).\n";
+        else
+            cout << " Comunidad: " << grafoTotalUsuarios() << " usuarios, "
+                 << filas << " calificaciones.\n";
+    }
+    cout << "Usuario activo: " << usuarioActivo()
+         << " (cambia con 'usuario <n>')\n";
 
     string linea;
     while (true) {
         cout << "> ";
         if (!getline(cin, linea)) break;
+
+        // Limpia el BOM UTF-8 (lo agregan algunas consolas/redirecciones de
+        // Windows) y el '\r' final de archivos con fin de linea CRLF.
+        if (linea.size() >= 3 && (unsigned char)linea[0] == 0xEF &&
+            (unsigned char)linea[1] == 0xBB && (unsigned char)linea[2] == 0xBF)
+            linea = linea.substr(3);
+        if (!linea.empty() && linea[linea.size() - 1] == '\r')
+            linea.erase(linea.size() - 1);
 
         Lexer lexer(linea);
         vector<Token> tokens = lexer.tokenizar();
@@ -117,6 +150,8 @@ void Interprete::ejecutar() {
             cout << "[DEV] tiempo: " << ms << " ms\n";
         }
 
+        while (!resultado.empty() && resultado[resultado.size() - 1] == '\n')
+            resultado.erase(resultado.size() - 1);
         cout << resultado << "\n";
         delete cmd;
     }

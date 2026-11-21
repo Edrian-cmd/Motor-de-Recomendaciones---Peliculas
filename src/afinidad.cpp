@@ -64,6 +64,39 @@ void grafoRegistrarCalificacion(int idUsuario, int idPelicula, int estrellas) {
     redSocial.agregarPelicula(idUsuario, idPelicula, estrellas);
 }
 
+// Estrellas que idUsuario le dio a idPelicula segun el grafo (0 si no la califico).
+// Complejidad: O(V + |H|)
+int grafoEstrellasDe(int idUsuario, int idPelicula) {
+    return redSocial.obtenerEstrellas(idUsuario, idPelicula);
+}
+
+// Copia en destino (hasta max) las calificaciones guardadas en el grafo para
+// idUsuario, en orden ascendente de idPelicula. Devuelve cuantas copio.
+// El grafo es el "almacen" de calificaciones de toda la comunidad, asi al cambiar
+// de usuario activo se recupera su historial sin duplicar datos. O(V + |H|)
+int grafoCalificacionesDe(int idUsuario, Calificacion* destino, int max) {
+    if (destino == nullptr || max <= 0)
+        return 0;
+    VerticeUsuario* v = redSocial.buscarVertice(idUsuario);
+    if (v == nullptr)
+        return 0;
+    int copiadas = 0;
+    NodoPelicula* p = v->historial;
+    while (p != nullptr && copiadas < max) {
+        destino[copiadas].idUsuario = idUsuario;
+        destino[copiadas].idPelicula = p->idPelicula;
+        destino[copiadas].estrellas = p->estrellas;
+        copiadas++;
+        p = p->sig;
+    }
+    return copiadas;
+}
+
+// Cantidad de usuarios (vertices) registrados en la red social. O(1)
+int grafoTotalUsuarios() {
+    return redSocial.totalVertices();
+}
+
 // Devuelve un puntaje colaborativo en [0.0, 1.0] para idPelicula respecto
 // al usuario activo, ponderando los k vecinos mas afines en el grafo.
 // Usa el cache interno de GrafoAfinidad para responder rapido las ~749 llamadas

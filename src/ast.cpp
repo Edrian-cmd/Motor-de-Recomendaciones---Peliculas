@@ -15,6 +15,7 @@ string nombreComando(TipoComando t) {
         case TipoComando::DESCUBRIR:     return "DESCUBRIR";
         case TipoComando::SIGUIENTE:     return "SIGUIENTE";
         case TipoComando::AFINIDAD:      return "AFINIDAD";
+        case TipoComando::CAMBIAR_USUARIO: return "CAMBIAR_USUARIO";
         case TipoComando::DEV_ON:        return "DEV_ON";
         case TipoComando::DEV_OFF:       return "DEV_OFF";
         case TipoComando::AYUDA:         return "AYUDA";

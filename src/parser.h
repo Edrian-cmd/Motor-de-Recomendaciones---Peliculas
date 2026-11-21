@@ -31,6 +31,7 @@ private:
     Comando* parsearExplicar();
     Comando* parsearAfinidad();
     Comando* parsearDev();
+    Comando* parsearUsuario();
 };
 
 #endif

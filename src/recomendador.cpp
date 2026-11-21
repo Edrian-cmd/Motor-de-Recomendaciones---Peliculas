@@ -66,6 +66,12 @@ static struct LiberadorUltimaLista {
     ~LiberadorUltimaLista() { delete[] ultimaLista; }
 } liberador;
 
+void recomendadorReiniciar() {
+    delete[] ultimaLista;
+    ultimaLista = nullptr;
+    tamUltimaLista = 0;
+}
+
 // ================= AUXILIARES =================
 
 static string minusculas(const string& s) {

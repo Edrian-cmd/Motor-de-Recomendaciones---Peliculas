@@ -17,4 +17,8 @@ int topN(int n, int* idsDestino);
 // solo el interruptor global.
 void recomendadorModoDev(bool activo);
 
+// Olvida la ultima lista de recomendar() (la usa explicar()). Se llama al
+// cambiar de usuario activo, porque esa lista era del usuario anterior.
+void recomendadorReiniciar();
+
 #endif
