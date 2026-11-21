@@ -252,7 +252,6 @@ ID,Titulo,Genero,Año
 251,Tenacious D in The Pick of Destiny,Comedia,2006
 252,Nacho Libre,Comedia,2006
 253,Elf,Comedia,2003
-254,Step Brothers,Comedia,2008
 255,Talladega Nights,Comedia,2006
 256,Zoolander,Comedia,2001
 257,Meet the Parents,Comedia,2000
@@ -326,7 +325,6 @@ ID,Titulo,Genero,Año
 325,Vanilla Sky,Sci-Fi,2001
 326,The Last Samurai,Accion,2003
 327,Valkyrie,Drama,2008
-328,Tropic Thunder,Comedia,2008
 329,Knight and Day,Accion,2010
 330,The Mummy,Aventura,1999
 331,The Mummy Returns,Aventura,2001
@@ -452,10 +450,8 @@ ID,Titulo,Genero,Año
 451,Kick-Ass,Accion,2010
 452,Scott Pilgrim vs. the World,Comedia,2010
 453,Baby Driver,Accion,2017
-454,Hot Fuzz,Accion,2007
 455,The Nice Guys,Comedia,2016
 456,Kiss Kiss Bang Bang,Comedia,2005
-457,Lethal Weapon,Accion,1987
 458,Die Hard with a Vengeance,Accion,1995
 459,Live Free or Die Hard,Accion,2007
 460,Air Force One,Accion,1997
@@ -464,18 +460,14 @@ ID,Titulo,Genero,Año
 463,Face/Off,Accion,1997
 464,Armageddon,Sci-Fi,1998
 465,Pearl Harbor,Accion,2001
-466,National Treasure,Accion,2004
 467,Ghost Rider,Accion,2007
 468,Gone in 60 Seconds,Accion,2000
 469,Drive,Accion,2011
 470,Nightcrawler,Thriller,2014
-471,Prisoners,Thriller,2013
 472,Zodiac,Thriller,2007
 473,Seven,Thriller,1995
 474,Gone Girl,Thriller,2014
 475,The Girl with the Dragon Tattoo,Thriller,2011
-476,Fight Club,Drama,1999
-477,The Social Network,Drama,2010
 478,Mank,Drama,2020
 479,The Curious Case of Benjamin Button,Drama,2008
 480,Panic Room,Thriller,2002
@@ -483,10 +475,8 @@ ID,Titulo,Genero,Año
 482,Alien 3,Sci-Fi,1992
 483,Prometheus,Sci-Fi,2012
 484,Alien: Covenant,Sci-Fi,2017
-485,The Martian,Sci-Fi,2015
 486,Blade Runner 2049,Sci-Fi,2017
 487,Dune,Sci-Fi,2021
-488,Gladiator,Accion,2000
 489,Kingdom of Heaven,Accion,2005
 490,Robin Hood,Accion,2010
 491,Exodus: Gods and Kings,Accion,2014
@@ -497,7 +487,6 @@ ID,Titulo,Genero,Año
 496,Hannibal,Thriller,2001
 497,Thelma & Louise,Drama,1991
 498,Legend,Aventura,1985
-499,Top Gun,Accion,1986
 500,Man on Fire,Accion,2004
 501,Deja Vu,Sci-Fi,2006
 502,Unstoppable,Accion,2010
@@ -506,23 +495,18 @@ ID,Titulo,Genero,Año
 505,Spy Game,Accion,2001
 506,Domino,Accion,2005
 507,True Romance,Accion,1993
-508,Pulp Fiction,Drama,1994
 509,Jackie Brown,Drama,1997
 510,Kill Bill: Vol. 2,Accion,2004
 511,Death Proof,Accion,2007
 512,The Hateful Eight,Western,2015
 513,Once Upon a Time in Hollywood,Drama,2019
 514,Boogie Nights,Drama,1997
-515,Magnolia,Drama,1999
 516,Punch-Drunk Love,Romance,2002
 517,There Will Be Blood,Drama,2007
 518,The Master,Drama,2012
 519,Inherent Vice,Comedia,2014
 520,Phantom Thread,Drama,2017
 521,Licorice Pizza,Comedia,2021
-522,No Country for Old Men,Thriller,2007
-523,Fargo,Thriller,1996
-524,The Big Lebowski,Comedia,1998
 525,O Brother Where Art Thou?,Comedia,2000
 526,Burn After Reading,Comedia,2008
 527,True Grit,Western,2010
@@ -538,11 +522,9 @@ ID,Titulo,Genero,Año
 537,Intolerable Cruelty,Romance,2003
 538,The Ladykillers,Comedia,2004
 539,A Serious Man,Drama,2009
-540,A Beautiful Mind,Drama,2001
 541,Apollo 13,Drama,1995
 542,Cinderella Man,Drama,2005
 543,Frost/Nixon,Drama,2008
-544,Rush,Drama,2013
 545,In the Heart of the Sea,Aventura,2015
 546,Solo: A Star Wars Story,Sci-Fi,2018
 547,The Da Vinci Code,Thriller,2006
@@ -562,20 +544,11 @@ ID,Titulo,Genero,Año
 561,Gung Ho,Comedia,1986
 562,Far and Away,Drama,1992
 563,E.T. the Extra-Terrestrial,Sci-Fi,1982
-564,Jaws,Thriller,1975
 565,Close Encounters of the Third Kind,Sci-Fi,1977
-566,Raiders of the Lost Ark,Aventura,1981
 567,Indiana Jones and the Temple of Doom,Aventura,1984
-568,Indiana Jones and the Last Crusade,Aventura,1989
 569,Indiana Jones and the Kingdom of the Crystal Skull,Aventura,2008
-570,Schindlers List,Drama,1993
-571,Jurassic Park,Sci-Fi,1993
 572,The Lost World: Jurassic Park,Sci-Fi,1997
-573,Saving Private Ryan,Drama,1998
-574,Catch Me If You Can,Drama,2002
-575,Minority Report,Sci-Fi,2002
 576,The Terminal,Comedia,2004
-577,War of the Worlds,Sci-Fi,2005
 578,Munich,Drama,2005
 579,Lincoln,Drama,2012
 580,Bridge of Spies,Drama,2015
@@ -596,19 +569,10 @@ ID,Titulo,Genero,Año
 595,The Color Purple,Drama,1985
 596,Empire of the Sun,Drama,1987
 597,Titanic,Romance,1997
-598,Avatar,Sci-Fi,2009
-599,The Terminator,Sci-Fi,1984
-600,Terminator 2: Judgment Day,Sci-Fi,1991
-601,Aliens,Sci-Fi,1986
 602,The Abyss,Sci-Fi,1989
-603,True Lies,Accion,1994
-604,Avatar: The Way of Water,Sci-Fi,2022
 605,Piranha II: The Spawning,Terror,1982
 606,Ghosts of the Abyss,Documental,2003
 607,Aliens of the Deep,Documental,2005
-608,The Lord of the Rings: The Fellowship of the Ring,Fantasia,2001
-609,The Lord of the Rings: The Two Towers,Fantasia,2002
-610,The Lord of the Rings: The Return of the King,Fantasia,2003
 611,The Hobbit: An Unexpected Journey,Fantasia,2012
 612,The Hobbit: The Desolation of Smaug,Fantasia,2013
 613,The Hobbit: The Battle of the Five Armies,Fantasia,2014
@@ -627,12 +591,7 @@ ID,Titulo,Genero,Año
 626,Cloverfield,Sci-Fi,2008
 627,Let Me In,Terror,2010
 628,The Pallbearer,Comedia,1996
-629,Snowpiercer,Sci-Fi,2013
-630,Okja,Sci-Fi,2017
-631,Parasite,Thriller,2019
 632,Barking Dogs Never Bite,Comedia,2000
-633,Memories of Murder,Thriller,2003
-634,The Host,Sci-Fi,2006
 635,Mother,Drama,2009
 636,Shoplifters,Drama,2018
 637,Broker,Drama,2022
@@ -672,8 +631,6 @@ ID,Titulo,Genero,Año
 671,Taking Woodstock,Comedia,2009
 672,Billy Lynns Long Halftime Walk,Drama,2016
 673,Gemini Man,Sci-Fi,2019
-674,Spirited Away,Animacion,2001
-675,Princess Mononoke,Animacion,1997
 676,My Neighbor Totoro,Animacion,1988
 677,Howls Moving Castle,Animacion,2004
 678,Ponyo,Animacion,2008
@@ -685,7 +642,6 @@ ID,Titulo,Genero,Año
 684,The Boy and the Heron,Animacion,2023
 685,Lupin III: The Castle of Cagliostro,Animacion,1979
 686,The Tale of the Princess Kaguya,Animacion,2013
-687,Grave of the Fireflies,Animacion,1988
 688,Only Yesterday,Animacion,1991
 689,Pom Poko,Animacion,1994
 690,My Neighbors the Yamadas,Animacion,1999
@@ -701,7 +657,6 @@ ID,Titulo,Genero,Año
 700,Paprika,Animacion,2006
 701,Millennium Actress,Animacion,2001
 702,Tokyo Godfathers,Animacion,2003
-703,Your Name,Animacion,2016
 704,Weathering with You,Animacion,2019
 705,Suzume,Animacion,2022
 706,The Garden of Words,Animacion,2013
@@ -731,16 +686,13 @@ ID,Titulo,Genero,Año
 730,Inu-Oh,Animacion,2021
 731,Promare,Animacion,2019
 732,Dead Leaves,Animacion,2004
-733,Redline,Animacion,2009
 734,The Animatrix,Animacion,2003
 735,Batman: Mask of the Phantasm,Animacion,1993
 736,Batman: Under the Red Hood,Animacion,2010
 737,Batman: The Dark Knight Returns Part 1,Animacion,2012
 738,Batman: The Dark Knight Returns Part 2,Animacion,2013
 739,Justice League: The Flashpoint Paradox,Animacion,2013
-740,Spider-Man: Into the Spider-Verse,Animacion,2018
 741,Spider-Man: Across the Spider-Verse,Animacion,2023
-742,The Iron Giant,Animacion,1999
 743,Coraline,Animacion,2009
 744,Kubo and the Two Strings,Animacion,2016
 745,ParaNorman,Animacion,2012
