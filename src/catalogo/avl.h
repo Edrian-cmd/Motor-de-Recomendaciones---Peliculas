@@ -27,6 +27,8 @@ private:
     void buscarPorGeneroNodo(NodoAVL* nodo, const std::string& genero, std::string& resultado, int& contador);
     void buscarPorAnioNodo(NodoAVL* nodo, int desde, int hasta, std::string& resultado, int& contador);
     void destruirNodo(NodoAVL* nodo);
+    bool contieneIdNodo(NodoAVL* nodo, int id);
+    int contarPorAnioNodo(NodoAVL* nodo, int desde, int hasta);
 
 public:
     ArbolAVL();
@@ -36,6 +38,10 @@ public:
     void insertar(int id, const std::string& titulo, const std::string& genero, int anio);
     std::string buscarPorGenero(const std::string& genero);
     std::string buscarPorAnio(int desde, int hasta);
+
+    // Para el comando "comparar" (solo cuentan, no arman texto):
+    bool contieneId(int id);                   // O(n): el arbol esta ordenado por anio, no por id
+    int contarPorAnio(int desde, int hasta);   // O(log n + k) con poda
 
     int obtenerAlturaRaiz() const;
     int obtenerRotacionesTotales() const;

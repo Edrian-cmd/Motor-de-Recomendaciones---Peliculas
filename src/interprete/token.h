@@ -7,6 +7,7 @@ enum class TipoToken {
     // Comandos
     BUSCAR, CALIFICAR, RECOMENDAR, EXPLICAR, DESHACER,
     HISTORIAL, DESCUBRIR, SIGUIENTE, AFINIDAD, DEV, AYUDA, SALIR,
+    ESTADISTICAS, COMPARAR,
     // Palabras auxiliares
     ID, GENERO, ANIO, TOP, USUARIO, ON, OFF,
     // Tokens con valor

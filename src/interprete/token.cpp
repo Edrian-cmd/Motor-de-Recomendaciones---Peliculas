@@ -16,6 +16,8 @@ string nombreToken(TipoToken t) {
         case TipoToken::DEV:         return "DEV";
         case TipoToken::AYUDA:       return "AYUDA";
         case TipoToken::SALIR:       return "SALIR";
+        case TipoToken::ESTADISTICAS: return "ESTADISTICAS";
+        case TipoToken::COMPARAR:    return "COMPARAR";
         case TipoToken::ID:          return "ID";
         case TipoToken::GENERO:      return "GENERO";
         case TipoToken::ANIO:        return "ANIO";

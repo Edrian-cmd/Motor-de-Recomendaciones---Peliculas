@@ -180,6 +180,101 @@ const Pelicula* peliculaPorIndice(int i) {
     return miCatalogoLineal.datos[i];
 }
 
+// ================= COMANDO "comparar" (PR 6) =================
+// Mide la misma busqueda con distintas estructuras. Cada busqueda se repite
+// REPETICIONES veces porque una sola tarda menos que la resolucion del reloj.
+// Ademas del tiempo se muestran los pasos (comparaciones / nodos visitados),
+// que no dependen de la PC y son lo que explica la complejidad.
+
+static const int REPETICIONES = 100000;
+
+static double microsPorBusqueda(chrono::steady_clock::time_point a,
+                                chrono::steady_clock::time_point b) {
+    return chrono::duration<double, micro>(b - a).count() / REPETICIONES;
+}
+
+// Busqueda secuencial por ID en el arreglo de carga: O(n)
+static int idLineal(int id, int& pasos) {
+    pasos = 0;
+    for (int i = 0; i < miCatalogoLineal.cantidad; i++) {
+        pasos++;
+        if (miCatalogoLineal.datos[i]->id == id) return i;
+    }
+    return -1;
+}
+
+// Conteo secuencial por rango de anios: siempre recorre las n peliculas, O(n)
+static int anioLineal(int desde, int hasta, int& pasos) {
+    pasos = 0;
+    int total = 0;
+    for (int i = 0; i < miCatalogoLineal.cantidad; i++) {
+        pasos++;
+        int a = miCatalogoLineal.datos[i]->anio;
+        if (a >= desde && a <= hasta) total++;
+    }
+    return total;
+}
+
+string compararPorId(int id) {
+    volatile int sumidero = 0;          // evita que el compilador quite los bucles
+    int pasosLineal = 0;
+
+    chrono::steady_clock::time_point t0 = chrono::steady_clock::now();
+    for (int r = 0; r < REPETICIONES; r++) sumidero += idLineal(id, pasosLineal);
+    chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
+    for (int r = 0; r < REPETICIONES; r++) sumidero += (miCatalogoHash.obtener(id) != nullptr);
+    chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
+    for (int r = 0; r < REPETICIONES; r++) sumidero += miCatalogoAVL.contieneId(id);
+    chrono::steady_clock::time_point t3 = chrono::steady_clock::now();
+    (void)sumidero;
+
+    const Pelicula* p = miCatalogoHash.obtener(id);
+    ostringstream o;
+    o << fixed << setprecision(3);
+    o << "=== Comparar busqueda por ID " << id << " ("
+      << (p != nullptr ? p->titulo : string("no existe")) << "), "
+      << totalPeliculas() << " peliculas ===\n";
+    o << "  Lineal (arreglo)   O(n)       : " << setw(8) << microsPorBusqueda(t0, t1)
+      << " us | " << pasosLineal << " comparaciones\n";
+    o << "  Tabla Hash         O(1) prom. : " << setw(8) << microsPorBusqueda(t1, t2)
+      << " us | " << miCatalogoHash.obtenerSondeosUltimaBusqueda() << " sondeos\n";
+    o << "  AVL (por anio)     O(n)       : " << setw(8) << microsPorBusqueda(t2, t3)
+      << " us | " << miCatalogoAVL.obtenerNodosVisitados() << " nodos visitados\n";
+    o << "  (promedio de " << REPETICIONES << " repeticiones; el AVL esta ordenado por anio,"
+      << " por eso el ID se busca en el Hash)";
+    return o.str();
+}
+
+string compararPorAnio(int desde, int hasta) {
+    if (desde > hasta) {
+        int tmp = desde;
+        desde = hasta;
+        hasta = tmp;
+    }
+    volatile int sumidero = 0;
+    int pasosLineal = 0;
+    int encontradas = 0;
+
+    chrono::steady_clock::time_point t0 = chrono::steady_clock::now();
+    for (int r = 0; r < REPETICIONES; r++) sumidero += anioLineal(desde, hasta, pasosLineal);
+    chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
+    for (int r = 0; r < REPETICIONES; r++) sumidero += (encontradas = miCatalogoAVL.contarPorAnio(desde, hasta));
+    chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
+    (void)sumidero;
+
+    ostringstream o;
+    o << fixed << setprecision(3);
+    o << "=== Comparar busqueda por anio " << desde << ".." << hasta << " ("
+      << encontradas << " peliculas), " << totalPeliculas() << " en total ===\n";
+    o << "  Lineal (arreglo)   O(n)         : " << setw(8) << microsPorBusqueda(t0, t1)
+      << " us | " << pasosLineal << " peliculas revisadas\n";
+    o << "  AVL con poda       O(log n + k) : " << setw(8) << microsPorBusqueda(t1, t2)
+      << " us | " << miCatalogoAVL.obtenerNodosVisitados() << " nodos visitados (altura "
+      << miCatalogoAVL.obtenerAlturaRaiz() << ")\n";
+    o << "  (promedio de " << REPETICIONES << " repeticiones)";
+    return o.str();
+}
+
 // Registra o actualiza una calificacion en O(1) promedio
 void registrarVoto(int idPelicula, int estrellasNuevas, int estrellasAnteriores) {
     miCatalogoHash.registrarVoto(idPelicula, estrellasNuevas, estrellasAnteriores);

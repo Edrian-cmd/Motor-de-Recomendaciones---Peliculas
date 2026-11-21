@@ -11,7 +11,7 @@ using namespace std;
 // =====================================================================
 // Integrante 3: Matematico (Motor de Recomendacion Personalizado)
 //
-// Ya no usa datos mock. Depende de estas funciones del contrato v2:
+// Trabaja con el catalogo y los votos reales. Depende de estas funciones del contrato v2:
 //   Int.1 Aaron : obtenerPelicula, totalPeliculas, peliculaPorIndice
 //                 (y los campos ratingPromedio / numVotos de Pelicula)
 //   Int.2 Imanol: estrellasDelActivo, calificacionesDelActivo
@@ -47,14 +47,10 @@ static const double PROMEDIO_NEUTRO = 3.0;  // C si nadie califico nada aun
 
 // ================= ESTADO DEL MODULO =================
 
-static bool modoDevLocal = false;
-
-void recomendadorModoDev(bool activo) {
-    modoDevLocal = activo;
-}
-
+// El diagnostico del Max-Heap se muestra solo con "dev on" (modoDevActivo,
+// interruptor global del contrato v2).
 static bool devActivo() {
-    return modoDevLocal || modoDevActivo();
+    return modoDevActivo();
 }
 
 // Ultima lista entregada por recomendar(), la usa explicar().

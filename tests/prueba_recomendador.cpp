@@ -8,7 +8,7 @@
 // (Int.2), el grafo (Int.4) y el interprete (Int.5).
 //
 // Compilar desde la raiz del repositorio:
-//   g++ -std=c++11 -Wall -Wextra -Isrc src/maxheap.cpp src/recomendador.cpp tests/prueba_recomendador.cpp -o prueba_recomendador
+//   g++ -std=c++11 -Wall -Wextra -Isrc/contrato -Isrc/recomendador src/recomendador/maxheap.cpp src/recomendador/recomendador.cpp tests/prueba_recomendador.cpp -o prueba_recomendador   (o: compilar.bat pruebas)
 //   ./prueba_recomendador
 
 #include "modulos.h"

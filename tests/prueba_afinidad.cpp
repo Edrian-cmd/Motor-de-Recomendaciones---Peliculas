@@ -2,8 +2,8 @@
 // No forma parte del programa final: tiene su propio main y versiones falsas
 // locales de las funciones del contrato v2 de los Integrantes 1, 2 y 5.
 //
-// Compilar desde la raiz del repositorio (requiere contrato v2 en src/modelo.h y src/modulos.h):
-//   g++ -std=c++11 -Wall -Wextra -Isrc src/grafo.cpp src/afinidad.cpp tests/prueba_afinidad.cpp -o prueba_afinidad.exe
+// Compilar desde la raiz del repositorio (contrato v2 en src/contrato/):
+//   g++ -std=c++11 -Wall -Wextra -Isrc/contrato -Isrc/afinidad src/afinidad/grafo.cpp src/afinidad/afinidad.cpp tests/prueba_afinidad.cpp -o prueba_afinidad.exe   (o: compilar.bat pruebas)
 //   ./prueba_afinidad.exe
 
 #include "modelo.h"

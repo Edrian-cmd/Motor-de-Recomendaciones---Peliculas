@@ -1,12 +1,10 @@
-buscar id 3
-buscar id 9999
-buscar genero "terror"
+buscar id 13
+buscar genero "sci-fi"
 buscar anio 1960..1955
 historial
 recomendar top 5
-explicar id 673
+explicar id 49
 afinidad usuario 2
-afinidad usuario 3
 calificar id 3 5
 calificar id 3 2
 deshacer
@@ -15,6 +13,9 @@ siguiente
 calificar id 99999 4
 calificar id 5 9
 recomendar top 3 genero "animacion"
+estadisticas
+comparar id 650
+comparar anio 1990..1999
 usuario 4
 recomendar top 3
 usuario 1
@@ -23,6 +24,7 @@ buscar id 7
 recomendar top 2
 afinidad usuario 2
 dev off
+usuario <10>
 foo bar
 buscar anio
 "sin cerrar

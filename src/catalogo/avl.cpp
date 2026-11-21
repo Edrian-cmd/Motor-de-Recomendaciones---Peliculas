@@ -186,6 +186,40 @@ std::string ArbolAVL::buscarPorAnio(int desde, int hasta) {
     return resultado;
 }
 
+// Busqueda por ID en un arbol ordenado por ANIO: no se puede podar, hay que
+// recorrerlo (pre-orden, se detiene al encontrarlo). O(n). Sirve en "comparar"
+// para mostrar por que el ID se busca en la Tabla Hash y no en el AVL.
+bool ArbolAVL::contieneIdNodo(NodoAVL* nodo, int id) {
+    if (nodo == nullptr) return false;
+    nodosVisitadosUltimaBusqueda++;
+    if (nodo->id == id) return true;
+    return contieneIdNodo(nodo->izq, id) || contieneIdNodo(nodo->der, id);
+}
+
+bool ArbolAVL::contieneId(int id) {
+    nodosVisitadosUltimaBusqueda = 0;
+    return contieneIdNodo(raiz, id);
+}
+
+// Igual que buscarPorAnioNodo (misma poda) pero solo cuenta: O(log n + k)
+int ArbolAVL::contarPorAnioNodo(NodoAVL* nodo, int desde, int hasta) {
+    if (nodo == nullptr) return 0;
+    nodosVisitadosUltimaBusqueda++;
+    int total = 0;
+    if (nodo->anio >= desde)
+        total += contarPorAnioNodo(nodo->izq, desde, hasta);
+    if (nodo->anio >= desde && nodo->anio <= hasta)
+        total++;
+    if (nodo->anio <= hasta)
+        total += contarPorAnioNodo(nodo->der, desde, hasta);
+    return total;
+}
+
+int ArbolAVL::contarPorAnio(int desde, int hasta) {
+    nodosVisitadosUltimaBusqueda = 0;
+    return contarPorAnioNodo(raiz, desde, hasta);
+}
+
 int ArbolAVL::obtenerAlturaRaiz() const {
     return obtenerAltura(raiz);
 }

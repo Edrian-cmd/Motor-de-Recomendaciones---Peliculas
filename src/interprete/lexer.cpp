@@ -43,7 +43,8 @@ static const unordered_map<string, TipoToken>& palabrasReservadas() {
         {"id", TipoToken::ID},               {"genero", TipoToken::GENERO},
         {"anio", TipoToken::ANIO},           {"top", TipoToken::TOP},
         {"usuario", TipoToken::USUARIO},     {"on", TipoToken::ON},
-        {"off", TipoToken::OFF}
+        {"off", TipoToken::OFF},
+        {"estadisticas", TipoToken::ESTADISTICAS}, {"comparar", TipoToken::COMPARAR}
     };
     return tabla;
 }

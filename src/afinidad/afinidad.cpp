@@ -13,12 +13,7 @@ using namespace std;
 // Cantidad maxima de vecinos mas afines usados en el calculo colaborativo.
 static const int K_VECINOS_COLABORATIVOS = 10;
 
-static bool modoDevLocal = false;
 static GrafoAfinidad redSocial;
-
-void afinidadModoDev(bool activo) {
-    modoDevLocal = activo;
-}
 
 // ================= AUXILIARES =================
 
@@ -62,39 +57,6 @@ void grafoRegistrarCalificacion(int idUsuario, int idPelicula, int estrellas) {
     }
 
     redSocial.agregarPelicula(idUsuario, idPelicula, estrellas);
-}
-
-// Estrellas que idUsuario le dio a idPelicula segun el grafo (0 si no la califico).
-// Complejidad: O(V + |H|)
-int grafoEstrellasDe(int idUsuario, int idPelicula) {
-    return redSocial.obtenerEstrellas(idUsuario, idPelicula);
-}
-
-// Copia en destino (hasta max) las calificaciones guardadas en el grafo para
-// idUsuario, en orden ascendente de idPelicula. Devuelve cuantas copio.
-// El grafo es el "almacen" de calificaciones de toda la comunidad, asi al cambiar
-// de usuario activo se recupera su historial sin duplicar datos. O(V + |H|)
-int grafoCalificacionesDe(int idUsuario, Calificacion* destino, int max) {
-    if (destino == nullptr || max <= 0)
-        return 0;
-    VerticeUsuario* v = redSocial.buscarVertice(idUsuario);
-    if (v == nullptr)
-        return 0;
-    int copiadas = 0;
-    NodoPelicula* p = v->historial;
-    while (p != nullptr && copiadas < max) {
-        destino[copiadas].idUsuario = idUsuario;
-        destino[copiadas].idPelicula = p->idPelicula;
-        destino[copiadas].estrellas = p->estrellas;
-        copiadas++;
-        p = p->sig;
-    }
-    return copiadas;
-}
-
-// Cantidad de usuarios (vertices) registrados en la red social. O(1)
-int grafoTotalUsuarios() {
-    return redSocial.totalVertices();
 }
 
 // Devuelve un puntaje colaborativo en [0.0, 1.0] para idPelicula respecto
@@ -166,7 +128,7 @@ string afinidad(int usuario) {
     o << fixed << setprecision(1);
 
     // 1. Diagnostico del Modo Desarrollador (Funcionalidad 6)
-    bool dev = modoDevActivo() || modoDevLocal;
+    bool dev = modoDevActivo();
     if (dev) {
         o << "[DEV] Grafo Afinidad: " << redSocial.totalVertices() << " vertices, "
           << redSocial.totalAristas() << " aristas no dirigidas (similitud > 0)"

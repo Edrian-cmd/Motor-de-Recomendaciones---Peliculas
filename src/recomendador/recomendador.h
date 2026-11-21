@@ -11,12 +11,6 @@
 // La misma firma esta en modulos.h; declararla dos veces igual es valido en C++.
 int topN(int n, int* idsDestino);
 
-// Interruptor local del diagnostico del Max-Heap. Se mantiene porque el
-// interprete actual lo llama en "dev on"/"dev off"; el modulo tambien respeta
-// modoDevActivo() global del contrato v2. Se podra borrar cuando Edrian deje
-// solo el interruptor global.
-void recomendadorModoDev(bool activo);
-
 // Olvida la ultima lista de recomendar() (la usa explicar()). Se llama al
 // cambiar de usuario activo, porque esa lista era del usuario anterior.
 void recomendadorReiniciar();

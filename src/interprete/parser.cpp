@@ -67,6 +67,8 @@ Comando* Parser::parsear() {
         case TipoToken::AFINIDAD:   pos++; cmd = parsearAfinidad();   break;
         case TipoToken::DEV:        pos++; cmd = parsearDev();        break;
         case TipoToken::USUARIO:    pos++; cmd = parsearUsuario();    break;
+        case TipoToken::COMPARAR:   pos++; cmd = parsearComparar();   break;
+        case TipoToken::ESTADISTICAS: pos++; cmd = nuevo(TipoComando::ESTADISTICAS); break;
         case TipoToken::DESHACER:   pos++; cmd = nuevo(TipoComando::DESHACER);  break;
         case TipoToken::HISTORIAL:  pos++; cmd = nuevo(TipoComando::HISTORIAL); break;
         case TipoToken::DESCUBRIR:  pos++; cmd = nuevo(TipoComando::DESCUBRIR); break;
@@ -179,6 +181,34 @@ Comando* Parser::parsearUsuario() {
     Comando* c = nuevo(TipoComando::CAMBIAR_USUARIO);
     c->usuario = usuario;
     return c;
+}
+
+// comparar = "comparar" ( "id" ENTERO | "anio" ENTERO [ ".." ENTERO ] )
+Comando* Parser::parsearComparar() {
+    if (actual().tipo == TipoToken::ID) {
+        pos++;
+        int id;
+        if (!leerEntero(id)) return nullptr;
+        Comando* c = nuevo(TipoComando::COMPARAR_ID);
+        c->id = id;
+        return c;
+    }
+    if (actual().tipo == TipoToken::ANIO) {
+        pos++;
+        int desde, hasta;
+        if (!leerEntero(desde)) return nullptr;
+        hasta = desde;
+        if (actual().tipo == TipoToken::PUNTOS) {
+            pos++;
+            if (!leerEntero(hasta)) return nullptr;
+        }
+        Comando* c = nuevo(TipoComando::COMPARAR_ANIO);
+        c->anioDesde = desde;
+        c->anioHasta = hasta;
+        return c;
+    }
+    fallar("'id' o 'anio'");
+    return nullptr;
 }
 
 Comando* Parser::parsearDev() {
