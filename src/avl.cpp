@@ -1,5 +1,15 @@
 #include "avl.h"
 #include <algorithm>
+#include <cctype>
+
+// Comparacion de generos sin distinguir mayusculas: "drama" == "Drama". O(len)
+static bool mismoGenero(const std::string& a, const std::string& b) {
+    if (a.size() != b.size()) return false;
+    for (size_t i = 0; i < a.size(); i++)
+        if (std::tolower((unsigned char)a[i]) != std::tolower((unsigned char)b[i]))
+            return false;
+    return true;
+}
 
 ArbolAVL::ArbolAVL() {
     raiz = nullptr;
@@ -122,7 +132,7 @@ void ArbolAVL::buscarPorGeneroNodo(NodoAVL* nodo, const std::string& genero, std
     nodosVisitadosUltimaBusqueda++;
     buscarPorGeneroNodo(nodo->izq, genero, resultado, contador);
 
-    if (nodo->genero == genero) {
+    if (mismoGenero(nodo->genero, genero)) {
         resultado += "- [" + std::to_string(nodo->anio) + "] " + nodo->titulo + " (ID: " + std::to_string(nodo->id) + ")\n";
         contador++;
     }

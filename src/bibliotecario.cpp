@@ -140,6 +140,12 @@ string buscarPorGenero(const string& genero) {
 }
 
 string buscarPorAnio(int desde, int hasta) {
+    // "buscar anio 2010..2000" se interpreta igual que 2000..2010
+    if (desde > hasta) {
+        int tmp = desde;
+        desde = hasta;
+        hasta = tmp;
+    }
     auto inicio = chrono::high_resolution_clock::now();
     string respuesta = miCatalogoAVL.buscarPorAnio(desde, hasta);
     auto fin = chrono::high_resolution_clock::now();

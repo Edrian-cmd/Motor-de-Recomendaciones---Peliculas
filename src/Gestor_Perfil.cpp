@@ -239,6 +239,18 @@ std::string descubrir() {
 }
 
 std::string siguiente() {
+    // Descarta del frente las peliculas que el usuario califico despues de
+    // 'descubrir', para no sugerirle algo que ya vio.
+    while (frenteCola != nullptr && estrellasDelActivo(frenteCola->id_pelicula) != 0) {
+        Cola* yaVista = frenteCola;
+        frenteCola = frenteCola->next;
+        delete yaVista;
+        tamCola--;
+    }
+    if (frenteCola == nullptr) {
+        finalCola = nullptr;
+    }
+
     if (frenteCola == nullptr) {
         return "No hay peliculas en la cola de descubrimientos. Usa 'descubrir' para cargar nuevas." + diagnosticoDev();
     }
